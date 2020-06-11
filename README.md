@@ -3,7 +3,7 @@ group project 3
 
 <br>
 <br>
-Front End-Austine Gomez https://github.com/agomez99
+Front-End-Austine Gomez https://github.com/agomez99
 <br>
-Backend- Jio Martinez https://github.com/Jiovanie09
+Back-end- Jio Martinez https://github.com/Jiovanie09
 
