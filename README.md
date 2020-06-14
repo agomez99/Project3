@@ -1,7 +1,7 @@
 # Project3
 group project 3
 <br>
-A coder's website with user's blog, stories and tutorials.
+A coder's website with with a user login and user's blog, stories and tutorials.
 <br>
 <br>
 Front-end-Austine Gomez https://github.com/agomez99
