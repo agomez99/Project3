@@ -1,6 +1,5 @@
 # Project3
 group project 3
-Creating a Coding Blog 
 
 <br>
 <br>
