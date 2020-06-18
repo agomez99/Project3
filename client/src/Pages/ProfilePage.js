@@ -1,8 +1,10 @@
 import React from 'react';
+import Title from '../Components/Title/Title';
 
 const ProfilePage = ()=> {
     return (
-        <h1>ProfilePage</h1>
+        <Title/>
+        
     )
 }
 
