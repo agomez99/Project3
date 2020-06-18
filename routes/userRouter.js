@@ -2,7 +2,12 @@ const router =require("express").Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require('../models/userModel');
+<<<<<<< HEAD
 const auth = require('../middleware/auth')
+=======
+
+
+>>>>>>> 3d535dbcd0272c4dd5225c0548996d978a7450e0
 router.post("/register", async (req, res) => {
   try {
     const { email, password, passwordCheck, displayName } = req.body;
@@ -79,6 +84,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 //allow user to delete account
 
 router.delete("/delete",auth, async(req, res) =>{
@@ -99,5 +105,9 @@ const token = req.header("x-")
     res.status(500).json({ error: err.message });
   }
 })
+=======
+//delete user
+
+>>>>>>> 3d535dbcd0272c4dd5225c0548996d978a7450e0
 
 module.exports = router;
