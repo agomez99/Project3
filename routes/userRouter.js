@@ -2,6 +2,8 @@ const router =require("express").Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require('../models/userModel');
+
+
 router.post("/register", async (req, res) => {
   try {
     const { email, password, passwordCheck, displayName } = req.body;
@@ -77,5 +79,8 @@ router.post("/login", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+//delete user
+
 
 module.exports = router;
