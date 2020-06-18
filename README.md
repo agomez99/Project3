@@ -1,14 +1,12 @@
 # Project3
 group project 3
-<<<<<<< HEAD
-=======
+
 <br>
 A coder's website with with a user login and user's blog, stories and tutorials.
 <br>
 <br>
 Technologies used:
 <br>
->>>>>>> 2e4a400b353d753d1ac91895bf92cbfe78465698
 
 <img src="https://www.kindpng.com/picc/m/452-4529239_html-css-and-javascript-logo-html-css-logo.png"  width="300" height="110"/><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT10Xw22EAOpM9gmpet02izfOPxZ-_QtD6Jva_6ED9ig84aW4kN&usqp=CAU" width="140" height="120" />
 <br>
