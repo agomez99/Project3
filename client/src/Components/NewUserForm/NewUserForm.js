@@ -1,14 +1,19 @@
+import "./style.css"
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import "./style.css"
 
-const LoginForm = () => {
+const NewUserForm = () => {
     return (
         <Card body className="cardContainer">
             <Form>
-
+            
+            <Form.Group controlId="formBasicEmail">
+                    <Form.Label>Enter Username</Form.Label>
+                    <Form.Control type="email" placeholder="Enter username" />
+                
+                </Form.Group>
                 
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -33,4 +38,4 @@ const LoginForm = () => {
     )
 }
 
-export default LoginForm;
+export default NewUserForm;

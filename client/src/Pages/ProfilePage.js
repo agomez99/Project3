@@ -1,8 +1,14 @@
 import React from 'react';
+import Title from '../Components/Title/Title';
+import ProfileCard from '../Components/ProfileCard/ProfileCard';
 
-const ProfilePage = ()=> {
+const ProfilePage = () => {
     return (
-        <h1>ProfilePage</h1>
+        <>
+            <Title />
+            <ProfileCard />
+        </>
+
     )
 }
 

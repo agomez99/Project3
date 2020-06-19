@@ -1,0 +1,10 @@
+.profile-container{
+    border: solid black;
+    align-items: center;
+    width: 50%;
+    margin-left: 4px;
+    
+}
+.profile-img{
+    width: 35%;
+}
