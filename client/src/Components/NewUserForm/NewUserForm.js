@@ -30,8 +30,7 @@ const NewUserForm = () => {
                 <Form.Group controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
-                <Button variant="primary" type="submit">Login</Button>
-                <p></p>
+             
                 <Button variant="primary" type="submit">Register</Button>
             </Form>
         </Card>
