@@ -2,6 +2,7 @@ const router =require("express").Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require('../models/userModel');
+const auth = require('../middleware/auth')
 router.post("/register", async (req, res) => {
   try {
     const { email, password, passwordCheck, displayName } = req.body;
@@ -50,7 +51,7 @@ router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    //validate
+    //validate login
     if (!email || !password)
       return res.status(400).json({ msg: "Not all fields have been entered" });
 
@@ -77,5 +78,26 @@ router.post("/login", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+//allow user to delete account
+
+router.delete("/delete",auth, async(req, res) =>{
+  try{
+    const deletedUser = await User.findByIdAndDelete(req.user);
+    res.json(deletedUser);
+  }catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+
+
+});
+
+router.post("/tokenisValid", async (req,res) =>{
+  try{
+const token = req.header("x-")
+  }catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+})
 
 module.exports = router;
