@@ -14,8 +14,9 @@ const MainNavbar = () => {
             <Nav.Link href="/blog">Blogs</Nav.Link>
             <Nav.Link href="/tutorial-page">Tutorials</Nav.Link>
             <Nav.Link href="/user-story-page">User Stories</Nav.Link>
+            <AuthOptions/>
+
         </Nav>
-        <AuthOptions/>
 
         <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />

@@ -22,7 +22,8 @@ const logout = () => {
             userData.user ? 
             <button onClick={logout}>Log Out</button> :
             <>
-
+            {/*<button onClick={register}>Register</button>
+            <button onClick={login}>Log in</button>*/}
             </>
             }
         </div>
