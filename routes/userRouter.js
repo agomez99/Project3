@@ -30,14 +30,13 @@ router.post("/register", async (req, res) => {
     const salt = await bcrypt.genSalt();
     const passwordHash  = await bcrypt.hash(password, salt);
 
-
-
     //new user with hash password
     const newUser = new User({
         email,
         password: passwordHash,
         displayName,
     })
+
     //save user
     const savedUser = await newUser.save();
     res.json(savedUser);
@@ -80,7 +79,6 @@ router.post("/login", async (req, res) => {
 });
 
 //allow user to delete account
-
 router.delete("/delete",auth, async(req, res) =>{
   try{
     const deletedUser = await User.findByIdAndDelete(req.user);
@@ -92,9 +90,19 @@ router.delete("/delete",auth, async(req, res) =>{
 
 });
 
+//user valid check
 router.post("/tokenisValid", async (req,res) =>{
   try{
-const token = req.header("x-")
+  const token = req.header("x-auth-token");
+  if(!token) return res.json(false);
+
+  const verified = jwt.verify(token, process.env.JWT_SECRET);
+  if(!verified) return res.json(false);
+
+  const user = await User.findById(verified.id)
+  if(!user) return res.json(false);
+  return res.json(true)
+
   }catch (err) {
     res.status(500).json({ error: err.message });
   }
