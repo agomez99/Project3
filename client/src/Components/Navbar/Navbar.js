@@ -15,7 +15,6 @@ const MainNavbar = () => {
             <Nav.Link href="/tutorial-page">Tutorials</Nav.Link>
             <Nav.Link href="/user-story-page">User Stories</Nav.Link>
             <AuthOptions/>
-
         </Nav>
 
         <Form inline>

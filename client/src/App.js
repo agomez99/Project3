@@ -1,5 +1,5 @@
 import React, {useState, useEffect }from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 import Axios from 'axios';
 import './App.css';
 import LoginPage from "./Pages/LoginPage";
@@ -11,6 +11,7 @@ import NewUserPage from './Pages/NewUserPage';
 import MainNavbar from './Components/Navbar/Navbar';
 import MainFooter from './Components/Footer/Footer';
 import UserContext  from './context/UserContext';
+import Post from './Components/Post';
 
 function App() {
 
@@ -59,6 +60,7 @@ function App() {
               <Route exact path="/login" component={LoginPage} />
               <Route exact path="/new-user" component={NewUserPage} />
               <Route exact path="/blog" component={BlogsPage} />
+              <Route path="/blog/:slug" render={Post} />
               <Route exact path="/tutorial-page" component={TutorialPage} />
               <Route exact path="/user-story-page" component={UserStoryPage} />
             </Switch>

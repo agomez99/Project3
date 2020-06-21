@@ -1,9 +1,10 @@
 import React from 'react';
 
-const BlogsPage = ()=> {
-    return (
-        <h1>BlogsPage</h1>
-    )
-}
+import NewBlog from '../Components/NewBlog/NewBlog'
+
+
+const BlogsPage = () => {
+  return <NewBlog/>;
+};
 
 export default BlogsPage;
