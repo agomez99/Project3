@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 import {Link }from 'react-router-dom';
-import Comments from '../Components/Comments';
 
 const PostSnippet = props => {
   return (
@@ -23,7 +22,6 @@ const PostSnippet = props => {
           {moment(props.published).format("YYYY-MM-DD")}
         </span>
       </div>
-      <Comments />
     </div>
   );
 }

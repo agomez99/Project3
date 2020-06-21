@@ -29,7 +29,6 @@ const Post = props => {
 
 
 
-
       
     </div>
   );
