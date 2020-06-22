@@ -17,7 +17,8 @@ const Post = props => {
   return (
     <div className="post">
       <h1>{data.title}</h1>
-      <h1>{data.slug.tags}</h1>
+      <h1>{data.slug}</h1>
+
       <hr />
       <div className="author">
         <img src={data.author.profile_image} alt="Author" className="p-image"/>
@@ -27,6 +28,8 @@ const Post = props => {
           <strong>
             {data.author.first_name} {data.author.last_name}
           </strong>
+          <p>{data.author.linkedin_url}</p>
+
           {' '} on {' '}
           {moment(data.published).format("MMMM Do, YYYY")}
         </div>

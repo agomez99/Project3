@@ -17,6 +17,7 @@ const logout = () => {
         user: undefined
     });
     localStorage.setItem("auth-token", "");
+    history.push("/login")
 }
     return(
         <div>
