@@ -10,8 +10,6 @@ app.use(cors());
 
 const PORT = process.env.PORT||5000;
 //---------------------------------------------------------------------------------
-
-
 require('dotenv').config({ path: '.env' });
 
 const bodyParser = require('body-parser');
@@ -83,7 +81,7 @@ app.listen(PORT, function() {
 });
 
 //mongoose
-mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {useNewUrlParser: true, useUnifiedTopology:true,useCreateIndex: true},
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING || MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology:true,useCreateIndex: true},
   (err)=> {
     if(err) throw err;
     console.log("Mongoose connection established")
