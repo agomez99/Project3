@@ -63,7 +63,7 @@ router.post("/login", async (req, res) => {
       return res.status(400).json({ msg: "Invalid credentials" });
 
       //webtoken
-    const token = jwt.sign({id:user._id},"F;95aJ[rCrq7Hq4}CHC/<4\w[Xq6HSRFVys>)SaPqW:KSN;f#4");
+    const token = jwt.sign({id:user._id}, process.env.JWT_SECRET);
     res.json({
         token,
         user:{
