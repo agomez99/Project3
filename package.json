@@ -2,7 +2,8 @@
   "name": "project3",
   "version": "1.0.0",
   "description": "a blog built with react",
-  "main": "server.js", "scripts": {
+  "main": "server.js",
+  "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
@@ -36,5 +37,8 @@
     "nedb": "^1.8.0",
     "nodemon": "^2.0.4",
     "pusher": "^3.0.1"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
   }
 }
