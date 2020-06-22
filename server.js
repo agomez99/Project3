@@ -80,8 +80,10 @@ app.listen(PORT, function() {
   console.log(`🌎==> API Server now listening on PORT ${PORT}  `);
 });
 
+
+const connection = "mongodb+srv://Back-End:pCx@yY3tfDYhJwt@cluster0-mhv2w.mongodb.net/test?retryWrites=true&w=majority";
 //mongoose
-mongoose.connect(process.env.MONGODB_CONNECTION_STRING || MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology:true,useCreateIndex: true},
+mongoose.connect(connection || MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology:true,useCreateIndex: true},
   (err)=> {
     if(err) throw err;
     console.log("Mongoose connection established")
