@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Pusher from 'pusher-js';
 import axios from 'axios';
-import '../App.css';
+import './style.css';
 
 class Comments extends Component {
     state = {
@@ -105,6 +105,7 @@ class Comments extends Component {
               Downvote
             </button>
           </div>
+          
           <div className="votes">Votes: {e.votes}</div>
         </div>
       </article>
@@ -134,7 +135,7 @@ class Comments extends Component {
               onChange={this.updateInput}
             />
             <br></br>
-            <button type="submit">Have your say</button>
+            <button type="submit">Leave A Comment!</button>
           </form>
         </section>
         <section className="comments-section">{userComments}</section>

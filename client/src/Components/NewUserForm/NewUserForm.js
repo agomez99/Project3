@@ -1,9 +1,9 @@
-import "../Components/LoginForm/style.css";
+import "../NewUserForm/style.css";
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import UserContext from "../context/UserContext";
+import UserContext from "../../context/UserContext";
 import Axios from "axios";
-import ErrorNotice from "../Components/misc/ErrorNotice";
+import ErrorNotice from "../misc/ErrorNotice";
 
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from '../Components/Title/Title';
-import NewUserForm from '../Components/NewUserForm';
+import NewUserForm from '../Components/NewUserForm/NewUserForm';
 
 const NewUserPage = ()=> {
 return (

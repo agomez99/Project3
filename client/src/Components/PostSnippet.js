@@ -2,9 +2,17 @@ import React from 'react';
 import moment from 'moment';
 import {Link }from 'react-router-dom';
 
+
+
+
+
+
+
+
 const PostSnippet = props => {
   return (
     <div className="post-snippet">
+              <img src={props.featured_image} alt="Author" className="p-image"/>
            <h3>
         <Link to={{
           pathname: `/blog/${props.slug}`,

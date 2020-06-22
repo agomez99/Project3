@@ -12,7 +12,15 @@ body{
 
 .post {
   text-align: center;
-
+}
+.p-image{
+  height:100px;
+}
+.post-snippet{
+  margin-top:5%;
+  margin-left:20%;
+  margin-right:20%;
+  border: 2px solid #dedede85;
 }
 
 label {
@@ -70,4 +78,10 @@ button {
 .downvote {
   background-color: #FF0026;
   border: 1px solid #FF0026;
+}
+
+.blog{
+  margin-top:10%;
+  border-bottom: 1px solid #ccc;
+
 }

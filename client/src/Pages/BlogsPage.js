@@ -1,7 +1,6 @@
 import React from 'react';
-
 import NewBlog from '../Components/NewBlog/NewBlog'
-import Comments from '../Components/Comments';
+import Comments from '../Components/Comments/Comments';
 
 
 const BlogsPage = () => {
