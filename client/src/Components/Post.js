@@ -21,7 +21,7 @@ const Post = props => {
 
       <hr />
       <div className="author">
-        <img src={data.author.profile_image} alt="Author" className="p-image"/>
+        <img src={data.author.profile_image} alt="Author" className="author-image"/>
         <div>
           Published by
           {' '}

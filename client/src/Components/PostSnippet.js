@@ -1,12 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import {Link }from 'react-router-dom';
-
-
-
-
-
-
+import '../App.css';
 
 
 const PostSnippet = props => {
@@ -21,7 +16,7 @@ const PostSnippet = props => {
           {props.title}
         </Link>
       </h3>
-      <p>{props.summary}</p>
+      <p className="p-summary">{props.summary}</p>
       <div>
         <div>By <strong>{props.author.first_name} {props.author.last_name}</strong></div>
         <span className="publication-date">

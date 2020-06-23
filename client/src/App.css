@@ -10,18 +10,7 @@ body{
   flex: 1;
 }
 
-.post {
-  text-align: center;
-}
-.p-image{
-  height:100px;
-}
-.post-snippet{
-  margin-top:5%;
-  margin-left:20%;
-  margin-right:20%;
-  border: 2px solid #dedede85;
-}
+
 
 label {
   display: block;
@@ -51,7 +40,7 @@ button {
   text-decoration: none;
   white-space: nowrap;
   border-radius: 2px;
-  background-color: #331550;
+  background-color: #928d97;
   border: 1px solid #331550;
   cursor: pointer;
   box-sizing: border-box;
@@ -80,8 +69,36 @@ button {
   border: 1px solid #FF0026;
 }
 
+.author-image{
+  height:100px;
+  float:left;
+}
 .blog{
   margin-top:10%;
   border-bottom: 1px solid #ccc;
+
+}
+.post {
+  text-align: center;
+}
+
+
+.p-image{
+  max-height:100%;
+  display:block;
+  float:left;
+
+}
+.p-sumamry{
+  display:block;
+}
+
+.post-snippet{
+  margin-top:5%;
+  margin-left:20%;
+  margin-right:20%;
+  height:200px;
+  border: 2px solid #dedede85;
+  display:block;
 
 }
