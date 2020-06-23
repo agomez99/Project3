@@ -16,8 +16,8 @@ const Post = props => {
   const data = props.location.state;
   return (
     <div className="post">
-      <h1>{data.title}</h1>
-      <h1>{data.slug}</h1>
+      <h1 className="p-title">{data.title}</h1>
+      <div dangerouslySetInnerHTML={{__html: data.body}} />
 
       <hr />
       <div className="author">
@@ -35,12 +35,8 @@ const Post = props => {
         </div>
       </div>
       <hr />
-      <div dangerouslySetInnerHTML={{__html: data.body}} />
       <hr />
       <Link to="/blog">&larr; Back to the posts list</Link>
-
-
-
       
     </div>
   );

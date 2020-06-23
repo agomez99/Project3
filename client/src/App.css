@@ -71,7 +71,6 @@ button {
 
 .author-image{
   height:100px;
-  float:left;
 }
 .blog{
   margin-top:10%;
@@ -79,9 +78,15 @@ button {
 
 }
 .post {
-  text-align: center;
+text-align: justify;
+margin-left: 20%;
+margin-right:20%;
 }
-
+.author{
+  text-align:center;
+  margin-left: 30%;
+  margin-right:30%;
+}
 
 .p-image{
   max-height:100%;
@@ -92,7 +97,9 @@ button {
 .p-sumamry{
   display:block;
 }
-
+.p-title{
+  text-align:center;
+}
 .post-snippet{
   margin-top:5%;
   margin-left:20%;
