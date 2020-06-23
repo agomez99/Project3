@@ -56,8 +56,8 @@ function App() {
             <UserContext.Provider value={{userData, setUserData}}>
             <MainNavbar />
             <Switch>
-              <Route exact path="/" component={ProfilePage} />
-              <Route exact path="/login" component={LoginPage} />
+              <Route exact path="/profile" component={ProfilePage} />
+              <Route exact path="/" component={LoginPage} />
               <Route exact path="/new-user" component={NewUserPage} />
               <Route exact path="/blog" component={BlogsPage} />
               <Route path="/blog/:slug" render={Post} />

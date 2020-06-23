@@ -9,8 +9,8 @@ const {userData, setUserData} = useContext(UserContext);
 
 const history = useHistory();
 
-const register = () => history.push("/new-user");
-const login = () => history.push("/login");
+//const register = () => history.push("/new-user");
+//const login = () => history.push("/login");
 const logout = () => {
     setUserData({
         token: undefined,
@@ -25,8 +25,8 @@ const logout = () => {
                 userData.user ? 
         <button onClick={logout}>Log Out</button> :
             <>
-            <button onClick={register}>Register</button>
-            <button onClick={login}>Log in</button>
+            {/*<button onClick={register}>Register</button>
+            <button onClick={login}>Log in</button>*/}
             </>
             }
         </div>

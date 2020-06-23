@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 import Axios from "axios";
 import ErrorNotice from "../misc/ErrorNotice";
-import AuthOptions from '../AuthOptions';
 
 export default function Login() {
   const [email, setEmail] = useState();
@@ -15,6 +14,7 @@ export default function Login() {
 
   const { setUserData } = useContext(UserContext);
   const history = useHistory();
+  const register = () => history.push("/new-user");
 
   const submit = async (e) => {
     e.preventDefault();
@@ -54,11 +54,14 @@ export default function Login() {
           type="password"
           onChange={(e) => setPassword(e.target.value)}
         />
+        <br></br>
+        <button type="submit" value="Log in" >Login</button>
 
-        <input type="submit" value="Log in" />
+
+        <button onClick={register}>Register</button>
+
       </form>
 
-      <AuthOptions/>
 
     </div>
   );

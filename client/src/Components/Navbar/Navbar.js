@@ -3,8 +3,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button'
-import AuthOptions from '../AuthOptions'
+import Button from 'react-bootstrap/Button';
+import AuthOptions from '../AuthOptions';
+
 const MainNavbar = () => {
     return(
     <Navbar bg="dark" variant="dark">
@@ -14,9 +15,7 @@ const MainNavbar = () => {
             <Nav.Link href="/blog">Blogs</Nav.Link>
             <Nav.Link href="/tutorial-page">Tutorials</Nav.Link>
             <Nav.Link href="/user-story-page">User Stories</Nav.Link>
-            <AuthOptions/>
         </Nav>
-
         <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
             <Button variant="outline-info">Search</Button>

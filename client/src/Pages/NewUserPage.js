@@ -6,6 +6,7 @@ const NewUserPage = ()=> {
 return (
     <>
     <Title/>
+
     <NewUserForm/>
     </>
 )

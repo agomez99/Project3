@@ -7,7 +7,7 @@ const Title = () => {
         <Jumbotron fluid className="jumbotronMain">
 
             <Container className="jumbotronContainer">
-                <h1>Code Resource</h1>
+                <h1>CodeSource</h1>
                 <p>
                     Find your coding solutions here.
                 </p>
