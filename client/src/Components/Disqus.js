@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Disqus from "disqus-react"
-
+import '../App.css';
 
 
 export default class extends Component {
@@ -19,9 +19,7 @@ export default class extends Component {
 
     return (
       <div className="article-container">
-
-   
-
+      <h4>Comments</h4>
         <Disqus.DiscussionEmbed
           shortname={disqusShortname}
           config={disqusConfig}
