@@ -1,5 +1,6 @@
 body{
   text-align: center;
+  background-color: rgb(243, 243, 243);
 }
 .page-container{
   display: flex;
@@ -79,8 +80,10 @@ button {
 }
 .post {
 text-align: justify;
-margin-left: 20%;
-margin-right:20%;
+margin-left: 16%;
+margin-right:16%;
+background-color: white;
+
 }
 .author{
   text-align:center;
@@ -107,5 +110,7 @@ margin-right:20%;
   height:200px;
   border: 2px solid #dedede85;
   display:block;
+  background-color: white;
+
 
 }

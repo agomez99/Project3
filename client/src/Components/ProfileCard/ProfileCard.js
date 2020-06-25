@@ -5,6 +5,7 @@ import UserContext from "../../context/UserContext";
 import "./style.css";
 const ProfileCard = () => {
   const { userData } = useContext(UserContext);
+  console.log(userData);
   return (
     <>
       <Card className="profile-container">

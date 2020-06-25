@@ -1,8 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import Comments from '../Components/Comments/Comments'
-
+import Disqus from '../Components/Disqus';
 
 const Post = props => {
   const data = props.location.state;
@@ -29,7 +28,10 @@ const Post = props => {
       <hr />
       <hr />
       <Link to="/blog">&larr; Back to the posts list</Link>
-      <Comments />
+      <Disqus />
+
+
+
     </div>
   );
 }
