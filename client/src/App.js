@@ -1,6 +1,6 @@
 import React, {useState, useEffect }from 'react';
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
-import Axios from 'axios';
+//import Axios from 'axios';
 import './App.css';
 import LoginPage from "./Pages/LoginPage";
 import ProfilePage from "./Pages/ProfilePage";
@@ -12,7 +12,7 @@ import MainNavbar from './Components/Navbar/Navbar';
 import MainFooter from './Components/Footer/Footer';
 import UserContext  from './context/UserContext';
 import Post from './Components/Post';
-
+import API from './api';
 function App() {
 
   const [userData, setUserData] = useState({
@@ -28,13 +28,13 @@ function App() {
         localStorage.setItem("auth-token", "");
         token = "";
       }
-      const tokenRes = await Axios.post(
-        "http://localhost:5000/users/tokenIsValid",
+      const tokenRes = await API.post(
+        "/users/tokenIsValid",
         null,
         { headers: { "x-auth-token": token } }
       );
       if (tokenRes.data) {
-        const userRes = await Axios.get("http://localhost:5000/users", {
+        const userRes = await API.get("/users", {
           headers: { "x-auth-token": token },
         });
         setUserData({
