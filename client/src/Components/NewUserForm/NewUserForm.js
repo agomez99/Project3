@@ -2,9 +2,9 @@ import "../NewUserForm/style.css";
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../../context/UserContext";
-import Axios from "axios";
+import axios from "axios";
 import ErrorNotice from "../misc/ErrorNotice";
-
+import API from '../../api';
 
 
 const NewUserForm = () => {
@@ -23,8 +23,8 @@ const NewUserForm = () => {
 
     try {
       const newUser = { email, password, passwordCheck, displayName };
-      await Axios.post("http://localhost:5000/users/register", newUser);
-      const loginRes = await Axios.post("http://localhost:5000/users/login", {
+      await axios.post("/users/register", newUser);
+      const loginRes = await axios.post("/users/login", {
         email,
         password,
       });
