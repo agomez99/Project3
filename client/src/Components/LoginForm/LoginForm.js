@@ -31,6 +31,7 @@ export default function Login() {
       history.push("/profile");
     } catch (err) {
        setError(err.response.data.msg);
+       console.log(err.response.data.msg);
     }
   };
   return (
