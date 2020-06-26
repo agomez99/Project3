@@ -29,12 +29,12 @@ function App() {
         token = "";
       }
       const tokenRes = await Axios.post(
-        "https://codessource.herokuapp.com/users/tokenIsValid" ,
+        "http://localhost:5000/users/tokenIsValid",
         null,
         { headers: { "x-auth-token": token } }
       );
       if (tokenRes.data) {
-        const userRes = await Axios.get("https://codessource.herokuapp.com/users", {
+        const userRes = await Axios.get("http://localhost:5000/users/", {
           headers: { "x-auth-token": token },
         });
         setUserData({
