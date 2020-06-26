@@ -123,3 +123,14 @@ background-color: white;
   margin-right:20%;
   margin-top:5%;
 }
+
+.error-notice{
+  color:red;
+}
+.error-button{
+  background:url(xbutton.jpg) no-repeat;
+  cursor:pointer;
+  border:none;
+  width:70px;
+  height:100px;
+}
