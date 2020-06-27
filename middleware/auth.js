@@ -1,23 +1,25 @@
-const jwt = require("jsonwebtoken");
+require('dotenv').config()
+const jwt = require('jsonwebtoken')
+
 const auth = (req, res, next) => {
-  try {
-    const token = req.header("x-auth-token");
-    if (!token)
-      return res
-        .status(401)
-        .json({ msg: "No Authentication token, Authorization denied" });
+  
+  //Get token from header 
+  const token = req.header('auth-token')
+  // console.log(token)
 
-    const verified = jwt.verify(token, process.env.JWT_SECRET);
-    if (!verified)
-      return res
-        .status(401)
-        .json({ msg: "Token verification failed , authorization failed" });
-
-    req.user = verified.id;
-    next();
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+  // check if not token 
+  if (!token) {
+    return res.status(401).json({ msg: 'No token, authorization denied' })
   }
-};
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET)
 
-module.exports = auth;
+    req.user = decoded.user
+    next()
+
+  } catch (err) {
+    res.status(401).json({ msg: 'Invalid Token' })
+  }
+}
+
+module.exports = auth

@@ -56,22 +56,6 @@ button {
   border-bottom: 1px solid #ccc;
 }
 
-.voting {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-}
-
-.upvote {
-  background-color: #073525;
-  border: 1px solid #073525;
-  margin-right: 10px;
-}
-
-.downvote {
-  background-color: #FF0026;
-  border: 1px solid #FF0026;
-}
 
 .author-image{
   height:100px;
@@ -114,8 +98,6 @@ background-color: white;
   border: 2px solid #dedede85;
   display:block;
   background-color: white;
-
-
 }
 
 .article-container{

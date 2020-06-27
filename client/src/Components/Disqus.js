@@ -13,10 +13,9 @@ export default class extends Component {
       identifier: "/nodejs-beginner",
       title: "Title of Your Article",
       language: "en"
-
-
     }
 
+    
     return (
       <div className="article-container">
       <h4>Comments</h4>
