@@ -10,7 +10,7 @@ import NewUserPage from './Pages/NewUserPage';
 import MainNavbar from './Components/Navbar/Navbar';
 import MainFooter from './Components/Footer/Footer';
 import UserContext  from './context/UserContext';
-import Post from './Components/Post';
+import Post from './Components/Post/Post';
 import API from './api';
 function App() {
 
@@ -38,7 +38,7 @@ function App() {
         });
         setUserData({
           token,
-          user: userRes.data,
+          user: userRes.data
         })
       }
     };

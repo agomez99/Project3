@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import butter from '../../butter-client';
-import PostSnippet from '../PostSnippet';
+import PostSnippet from '../Post/PostSnippet';
 
 const Blog = () => {
   const [loading, setLoading] = useState(false);

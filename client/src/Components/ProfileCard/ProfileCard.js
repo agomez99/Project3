@@ -11,7 +11,8 @@ const ProfileCard = () => {
       <Card className="profile-container">
         <img src={image} alt="me" className="profile-img" />
 
-        {userData.user ? <h1>Welcome <></> {userData.user.displayName}<br></br> {userData.user.email}</h1> : <></>}
+        {userData.user ? <h1>Welcome  {userData.user.displayName}<br></br></h1> : <><h4>Unknown Profile</h4></>}
+        {userData.user ? <h1>{userData.user.email}</h1>: <><h4>Email unknown</h4></>}
         <p>
           Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
           laying out print, graphic or web designs. The passage is attributed to

@@ -4,7 +4,13 @@ import Card from "react-bootstrap/Card"
 const TutorialPage = () => {
     return (
         <div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> e327497e4339027987dcf513e89bfcd7a0a98ee4
             <Card bg="danger">
+            <h1>Tutorials</h1>
+
                 <Card.Body className="video-container">
                     <iframe
                         title="json"
@@ -69,6 +75,10 @@ const TutorialPage = () => {
                     </iframe>
                 </Card.Body>
             </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> e327497e4339027987dcf513e89bfcd7a0a98ee4
         </div>
     )
 
