@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card"
 const TutorialPage = () => {
     return (
         <div>
+
             <Card bg="danger">
                 <Card.Body className="video-container">
                     <iframe
@@ -69,6 +70,8 @@ const TutorialPage = () => {
                     </iframe>
                 </Card.Body>
             </Card>
+        <h1>TutorialPage</h1>
+
         </div>
     )
 

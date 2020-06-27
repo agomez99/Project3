@@ -4,10 +4,12 @@ import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
+import AuthOptions from '../../Components/AuthOptions';
+import './style.css';
 
 const MainNavbar = () => {
     return(
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="dark" variant="dark" className="nav">
         <Navbar.Brand>Code-Source</Navbar.Brand>
         <Nav className="mr-auto">
             <Nav.Link href="/profile">Profile</Nav.Link>
@@ -15,8 +17,11 @@ const MainNavbar = () => {
             <Nav.Link href="/tutorial-page">Tutorials</Nav.Link>
         </Nav>
         <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-info">Search</Button>
+            <div className="auth">
+            <AuthOptions />
+            </div>
+            <FormControl type="text" placeholder="Search" className="mx-auto" />
+            <Button variant="outline-info" className="search-button">Search</Button>
         </Form>
     </Navbar>);
 };
