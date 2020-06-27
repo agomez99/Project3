@@ -7,12 +7,12 @@
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "proxy": "https://localhost:5000/"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "body-parser": "^1.19.0",
     "concurrently": "^5.2.0",
     "cors": "^2.8.5",
+    "disqus-react-unofficial": "^1.0.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "i": "^0.3.6",

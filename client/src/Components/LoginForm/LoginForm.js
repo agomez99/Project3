@@ -1,11 +1,12 @@
-
 import "./style.css"
-
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../../context/UserContext";
-import Axios from "axios";
+//import axios from "axios";
 import ErrorNotice from "../misc/ErrorNotice";
+import API from '../../api';
+
+
 
 export default function Login() {
   const [email, setEmail] = useState();
@@ -20,9 +21,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const loginUser = { email, password };
-      const loginRes = await Axios.post(
-        "http://localhost:5000/users/login",
-        loginUser
+      const loginRes = await API.post("/users/login",loginUser
       );
       setUserData({
         token: loginRes.data.token,
@@ -31,7 +30,8 @@ export default function Login() {
       localStorage.setItem("auth-token", loginRes.data.token);
       history.push("/profile");
     } catch (err) {
-      err.response.data.msg && setError(err.response.data.msg);
+       setError(err.response.data.msg);
+       console.log(err.response.data.msg);
     }
   };
   return (
