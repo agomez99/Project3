@@ -6,6 +6,8 @@ const TutorialPage = () => {
         <div>
 
             <Card bg="danger">
+            <h1>Tutorials</h1>
+
                 <Card.Body className="video-container">
                     <iframe
                         title="json"
@@ -70,7 +72,6 @@ const TutorialPage = () => {
                     </iframe>
                 </Card.Body>
             </Card>
-        <h1>TutorialPage</h1>
 
         </div>
     )

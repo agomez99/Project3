@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import {Link }from 'react-router-dom';
-import '../App.css';
+import '../../App.css';
 
 
 const PostSnippet = props => {
