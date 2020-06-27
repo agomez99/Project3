@@ -12,7 +12,6 @@ app.use(express.json({ extended: true }))
 //routes
 app.use('/register', require('./routes/register')) 
 app.use('/auth', require('./routes/auth')) 
-//app.use('/guests', require('./routes/guests')) 
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
