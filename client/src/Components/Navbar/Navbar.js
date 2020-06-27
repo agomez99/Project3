@@ -15,7 +15,6 @@ const MainNavbar = () => {
             <Nav.Link href="/profile">Profile</Nav.Link>
             <Nav.Link href="/blog">Blogs</Nav.Link>
             <Nav.Link href="/tutorial-page">Tutorials</Nav.Link>
-            <Nav.Link href="/user-story-page">User Stories</Nav.Link>
         </Nav>
         <Form inline>
             <div className="auth">
