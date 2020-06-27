@@ -6,7 +6,6 @@ import LoginPage from "./Pages/LoginPage";
 import ProfilePage from "./Pages/ProfilePage";
 import BlogsPage from "./Pages/BlogsPage";
 import TutorialPage from './Pages/TutorialPage';
-import UserStoryPage from './Pages/UserStoryPage';
 import NewUserPage from './Pages/NewUserPage';
 import MainNavbar from './Components/Navbar/Navbar';
 import MainFooter from './Components/Footer/Footer';
@@ -62,7 +61,6 @@ function App() {
               <Route exact path="/blog" component={BlogsPage} />
               <Route path="/blog/:slug" render={Post} />
               <Route exact path="/tutorial-page" component={TutorialPage} />
-              <Route exact path="/user-story-page" component={UserStoryPage} />
             </Switch>
             <MainFooter />
             </UserContext.Provider>
