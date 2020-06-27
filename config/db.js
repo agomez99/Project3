@@ -2,11 +2,11 @@ require('dotenv').config()
 
 const mongoose = require('mongoose')
 
-const URL = process.env.MONGODB_URL
+const URL = process.env.MONGOD_URL
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(URL || MONGOD_URL, {useNewUrlParser: true, 
+        await mongoose.connect(URL || MONGODB_URL, {useNewUrlParser: true, 
             useFindAndModify: false,
             useUnifiedTopology: true, useCreateIndex: true})
         console.log('Connected to MongoDB!!!')
