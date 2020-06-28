@@ -45,7 +45,7 @@ export default function TutorialPage() {
         return 'Loading...'
     }
 
-const videoId = userFetchResponse.data.items.map(obj => "http://www.youtube.com/embed/" + obj.id.videoId);
+const videoId = userFetchResponse.data.items.map(obj => "https://www.youtube.com/embed/" + obj.id.videoId);
 
     return (
         <div>
