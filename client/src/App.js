@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 import './App.css';
 
 //import LoginPage from "./Pages/LoginPage";
-import ProfilePage from "./Pages/ProfilePage";
+//import ProfilePage from "./Pages/ProfilePage";
 import BlogsPage from "./Pages/BlogsPage";
 import TutorialPage from './Pages/TutorialPage';
 import MainNavbar from './Components/Navbar/Navbar';
@@ -18,7 +18,7 @@ import Login from './Pages/Login'
 // import GuestState from './context/guestContext/GuestState'
 import AuthState from './context/authContext/AuthState'
 import setToken from './utils/setToken'
-import PrivateRoute from './Pages/routing/PrivateRoute'
+//import PrivateRoute from './Pages/routing/PrivateRoute'
 
 
 if (localStorage.token) {
@@ -32,7 +32,6 @@ function App() {
           <Router>
             <MainNavbar />
             <Switch>
-              <PrivateRoute exact path="/" component={ProfilePage} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/blog" component={BlogsPage} />

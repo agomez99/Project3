@@ -9,7 +9,7 @@ const Login = (props) => {
   
   useEffect(() => {
     if(userAuth) {
-      props.history.push('/')
+      props.history.push('/blog')
     }
   }, [userAuth, props.history])
 
@@ -30,13 +30,15 @@ const Login = (props) => {
     }
 
   return (
-    <div className="register">
+    <div className="login">
       <Title />
-      <h1>Login</h1>
+      <h4>Login</h4>
       <form onSubmit={handleSubmit}>
       <input type="text" name="email" placeholder="email" value={email} onChange={handleChange}></input>
       <input type="text" name="password" placeholder="password" value={password} onChange={handleChange}></input>
       <input type="submit" value="Login" className="btn"></input>
+      
+
       </form>
       <div className="question">
       {errors !== null && <button className="danger">

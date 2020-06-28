@@ -1,8 +1,8 @@
 import React, {useState, useContext, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import AuthContext from '../context/authContext/authContext'
-import Title from '../Components/Title/Title'
- 
+//import Title from '../Components/Title/Title'
+ import './style.css';
 
 const Register = (props) => {
   const {registerUser, userAuth, errors, setError, clearErrors} = useContext(AuthContext)
@@ -37,9 +37,9 @@ const Register = (props) => {
 
   return (
     <div className="register">
-    <Title />
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSubmit}>
+      <h4>Sign Up</h4>
+      <p>Already have an account? {""} <Link to = '/login'>Login</Link></p>
+      <form onSubmit={handleSubmit} className="reg-form">
       <input type="text" name="name" placeholder="name" value={name} onChange={handleChange}></input>
       <input type="text" name="email" placeholder="email" value={email} onChange={handleChange}></input>
       <input type="text" name="password" placeholder="password" value={password} onChange={handleChange}></input>
@@ -50,7 +50,6 @@ const Register = (props) => {
       {errors !== null && <button className="danger">
       {errors.msg ? errors.msg : errors.error[0].msg}
       <span onClick={() => clearErrors()}>X</span></button>}
-      <p>Already have an account? {""} <Link to = '/login'>Login</Link></p>
       </div>
     </div> 
   );
