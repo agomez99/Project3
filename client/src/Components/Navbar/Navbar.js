@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom'
 import AuthContext from '../../context/authContext/authContext'
 
-//import './style.css';
+import './style.css';
 
 const MainNavbar = () => {
     const {logout, clearErrors, userAuth, user} = useContext(AuthContext)
@@ -18,8 +18,8 @@ const MainNavbar = () => {
   }
 
     const userLinks = (
-        <Fragment>
-        <li>Hello, {user && user.name} </li>
+        <Fragment >
+        <li className="user">  Hello, {user && user.name} </li>
             <span className="sm-hide">|</span>
             <li>
               <a href="#!" onClick={handleLogout}>
@@ -45,9 +45,7 @@ const MainNavbar = () => {
 
     return(
         <div>
-
-
-    <Navbar bg="dark" variant="dark" className="nav">
+    <Navbar variant="dark" className="navbar">
         <Navbar.Brand>Code-Source</Navbar.Brand>
         <Nav className="mr-auto">
             <Nav.Link href="/profile">Profile</Nav.Link>

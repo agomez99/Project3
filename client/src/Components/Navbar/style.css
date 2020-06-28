@@ -1,5 +1,26 @@
+.navbar{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
 
 
+li{
+    list-style: none;
+    display: inline;
+    font-size: 25px;
+    color:white;
+    padding:10px;
+}
+li a{
+    color:white
+}
+
+.sm-hide{
+    color:white;
+    font-size: 30px;;
+}
 .search-button{
     margin-bottom:18px;
    margin-left:10px;
@@ -8,4 +29,7 @@
 margin-right:50px;
 margin-bottom:18px;
 padding:5px;
+}
+.user{
+    color:white;
 }
