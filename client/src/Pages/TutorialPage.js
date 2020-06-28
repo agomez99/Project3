@@ -2,22 +2,7 @@
 import React, {useContext, useState, useEffect} from 'react'
 import AuthContext from '../context/authContext/authContext'
 import "./style.css"
-import Card from "react-bootstrap/Card"
 
-
-const TutorialPage = () => {
-    const {getUser} = useContext(AuthContext)
-
-    useEffect(() => {
-      getUser()
-      // eslint-disable-next-line
-    }, [])
-
-    
-    return (
-        <div>
-            <Card bg="danger">
-            <h1>Tutorials</h1>
 
 
 function useFetch(url, defaultResponse) {
@@ -40,6 +25,17 @@ function useFetch(url, defaultResponse) {
     return data;
 }
 export default function TutorialPage() {
+
+    const {getUser} = useContext(AuthContext)
+
+    useEffect(() => {
+      getUser()
+      // eslint-disable-next-line
+    }, [])
+  
+
+
+
     const channelID = "UCXgGY0wkgOzynnHvSEVmE3A";
     const APIKEY = "AIzaSyBKnNYl2XaJBi5d_oR5kNBOsnYwf1R0M_E";
     const results = 10
