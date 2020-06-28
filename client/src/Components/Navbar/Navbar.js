@@ -29,7 +29,7 @@ const MainNavbar = () => {
       <li className="user"> Hello, {user && user.name} </li>
       <span className="sm-hide">|</span>
       <li>
-        <a href="/login" onClick={handleLogout}>
+        <a href="/" onClick={handleLogout}>
           <span className="sm-hide">Logout</span>
           <i className="fas fa-sign-out-alt"></i>
         </a>
@@ -49,7 +49,7 @@ const MainNavbar = () => {
       </li>
       <span className="sm-hide">|</span>
       <li>
-        <Link to="/login">Login</Link>
+        <Link to="/">Login</Link>
         <i class="fa fa-user" aria-hidden="true"></i>
       </li>
     </Fragment>
