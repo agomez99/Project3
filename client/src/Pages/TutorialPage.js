@@ -1,80 +1,58 @@
-import React from 'react';
-import "./style.css"
-import Card from "react-bootstrap/Card"
-const TutorialPage = () => {
+import React, { useState, useEffect } from 'react';
+
+
+function useFetch(url, defaultResponse) {
+    const [data, setData] = useState(defaultResponse);
+    async function getDataFromAPI(url) {
+        try {
+            const res = await fetch(url);
+            const data = await res.json();
+            setData({
+                isLoading: false,
+                data
+            })
+        } catch (e) {
+            console.log(e);
+        }
+    }
+    useEffect(() => {
+        getDataFromAPI(url);
+    }, [url])
+    return data;
+}
+export default function TutorialPage() {
+    const channelID = "UCXgGY0wkgOzynnHvSEVmE3A";
+    const APIKEY = "AIzaSyBKnNYl2XaJBi5d_oR5kNBOsnYwf1R0M_E";
+    const results = 10
+    const apiEndpoint = `https://www.googleapis.com/youtube/v3/search?key=${APIKEY}&channelId=${channelID}&part=snippet,id&order=date&&maxResults=${results}`
+    const userFetchResponse = useFetch(apiEndpoint, { isLoading: true, data: null });
+    if (!userFetchResponse.data || userFetchResponse.isLoading) {
+        return 'Loading...'
+    }
+
+const videoId = userFetchResponse.data.items.map(obj => "http://www.youtube.com/embed/" + obj.id.videoId);
+
     return (
         <div>
-            <Card bg="danger">
-            <h1>Tutorials</h1>
 
-                <Card.Body className="video-container">
-                    <iframe
-                        title="json"
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/4fCr1IepJRw"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </Card.Body>
-            </Card>
-            <Card bg="dark">
-                <Card.Body className="video-container">
-                    <iframe
-                        title="data"
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/6iZiqQZBQJY"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </Card.Body>
-            </Card>
-            <Card bg="danger">
-                <Card.Body className="video-container">
-                    <iframe
-                        title='traversy'
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/UB1O30fR-EE"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </Card.Body>
-            </Card>
-            <Card bg="dark">
-                <Card.Body className="video-container">
-                    <iframe
-                        title="traversy"
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/Wy9q22isx3U"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </Card.Body>
-            </Card>
-            <Card bg="danger">
-                <Card.Body className="video-container">
-                    <iframe
-                        title='traversy'
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/Uyei2iDA4Hs"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </Card.Body>
-            </Card>
+            {
+                videoId.map((link, i) => {
+                    var frame =
+                        <div key={i} className='youtube'>
+                            <iframe
+                                title={i}
+                                width="560"
+                                height="315"
+                                src={link}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen>
+                            </iframe>
+                        </div>
+                    return frame
+                })
+            }
+          
         </div>
     )
-
 }
-
-
-export default TutorialPage;
