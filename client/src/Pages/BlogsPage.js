@@ -1,9 +1,17 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react'
+
+import AuthContext from '../context/authContext/authContext'
 import NewBlog from '../Components/NewBlog/NewBlog'
 import Disqus from '../Components/Disqus';
 
 
 const BlogsPage = () => {
+const {getUser} = useContext(AuthContext)
+
+  useEffect(() => {
+    getUser()
+    // eslint-disable-next-line
+  }, [])
   return (
     <div>
       <NewBlog />

@@ -1,4 +1,23 @@
-import React, { useState, useEffect } from 'react';
+
+import React, {useContext, useState, useEffect} from 'react'
+import AuthContext from '../context/authContext/authContext'
+import "./style.css"
+import Card from "react-bootstrap/Card"
+
+
+const TutorialPage = () => {
+    const {getUser} = useContext(AuthContext)
+
+    useEffect(() => {
+      getUser()
+      // eslint-disable-next-line
+    }, [])
+
+    
+    return (
+        <div>
+            <Card bg="danger">
+            <h1>Tutorials</h1>
 
 
 function useFetch(url, defaultResponse) {
