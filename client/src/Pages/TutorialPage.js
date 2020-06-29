@@ -3,6 +3,7 @@ import React, {useContext, useState, useEffect} from 'react'
 import AuthContext from '../context/authContext/authContext'
 import "./style.css"
 
+require('dotenv').config()
 
 
 function useFetch(url, defaultResponse) {
@@ -37,7 +38,7 @@ export default function TutorialPage() {
 
 
     const channelID = "UCXgGY0wkgOzynnHvSEVmE3A";
-    const APIKEY = "AIzaSyBKnNYl2XaJBi5d_oR5kNBOsnYwf1R0M_E";
+    const APIKEY = process.env.REACT_APP_API_KEY
     const results = 10
     const apiEndpoint = `https://www.googleapis.com/youtube/v3/search?key=${APIKEY}&channelId=${channelID}&part=snippet,id&order=date&&maxResults=${results}`
     const userFetchResponse = useFetch(apiEndpoint, { isLoading: true, data: null });
