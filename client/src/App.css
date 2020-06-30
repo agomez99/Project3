@@ -70,6 +70,10 @@ button {
   border-bottom: 1px solid #ccc;
 
 }
+
+.title{
+  color:black;
+}
 .post {
 text-align: justify;
 margin-left: 16%;
@@ -123,4 +127,7 @@ background-color: white;
   border:none;
   width:70px;
   height:100px;
+}
+.login-btn{
+margin-top: 10px;
 }

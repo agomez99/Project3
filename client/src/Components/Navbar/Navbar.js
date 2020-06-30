@@ -45,12 +45,12 @@ const MainNavbar = () => {
     <Fragment>
       <li>
         <Link to="/register">Register</Link>
-        <i class="fa fa-user-plus" aria-hidden="true"></i>
+        <i className="fa fa-user-plus" aria-hidden="true"></i>
       </li>
       <span className="sm-hide">|</span>
       <li>
         <Link to="/">Login</Link>
-        <i class="fa fa-user" aria-hidden="true"></i>
+        <i className="fa fa-user" aria-hidden="true"></i>
       </li>
     </Fragment>
   );
@@ -60,9 +60,6 @@ const MainNavbar = () => {
     <div>
       <Navbar variant="dark" className="navbar">
         <Navbar.Brand className="logo">Code-Source</Navbar.Brand>
-
-
-
         <Form inline>
           <div className="auth">{userAuth ? userLinks : authLinks}</div>
         </Form>
