@@ -46,18 +46,3 @@ input, textarea {
   color: black;
 }
 
-.error-notice {
-  color: red;
-}
-
-.error-button {
-  background: url(xbutton.jpg) no-repeat;
-  cursor: pointer;
-  border: none;
-  width: 70px;
-  height: 100px;
-}
-
-.login-btn {
-  margin-top: 10px;
-}

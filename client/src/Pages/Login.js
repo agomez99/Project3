@@ -4,6 +4,7 @@ import AuthContext from "../context/authContext/authContext";
 import Title from "../Components/Title/Title";
 import { Input } from "@material-ui/core";
 import { Button } from "@material-ui/core";
+import './style.css';
 
 const Login = (props) => {
   const { loginUser, userAuth, errors, clearErrors } = useContext(AuthContext);
