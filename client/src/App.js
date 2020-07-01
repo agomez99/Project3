@@ -38,7 +38,7 @@ function App() {
             </Switch>
             <MainFooter />
           </Router>
-          </AuthState>
+        </AuthState>
   );
 }
 

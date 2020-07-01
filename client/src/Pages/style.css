@@ -1,7 +1,26 @@
 .video-container{
     border: 2px;
     border-radius: solid white 3px;
+    display: flex;
+}
+.video{
+    flex-direction: row;
 }
 .register{
     margin-top:7%
+}
+
+.video-container{
+    background-color: brown;
+    border-radius: 50%;
+    padding: 1px;
+    border: solid black 10px;
+
+}
+
+.video-array{
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }

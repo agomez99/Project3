@@ -39,23 +39,24 @@ export default function TutorialPage() {
 
     const channelID = "UCXgGY0wkgOzynnHvSEVmE3A";
     const APIKEY = process.env.REACT_APP_API_KEY
-    const results = 10
+    const results = 5
     const apiEndpoint = `https://www.googleapis.com/youtube/v3/search?key=${APIKEY}&channelId=${channelID}&part=snippet,id&order=date&&maxResults=${results}`
     const userFetchResponse = useFetch(apiEndpoint, { isLoading: true, data: null });
     if (!userFetchResponse.data || userFetchResponse.isLoading) {
         return 'Loading...'
     }
-
-const videoId = userFetchResponse.data.items.map(obj => "https://www.youtube.com/embed/" + obj.id.videoId);
-
+const videoTitle = userFetchResponse.data.items.map(obj => obj.snippet.channelTitle)
+const videoId = userFetchResponse.data.items.map(obj => "https://www.youtube.com/embed/"+obj.id.videoId);
+console.log(videoId)
+console.log(videoTitle)
     return (
-        <div>
+        <div className='video-array'>
 
             {
                 videoId.map((link, i) => {
                     var frame =
-                        <div key={i} className='youtube'>
-                            <iframe
+                        <div key={i}>
+                            <iframe className='videos'
                                 title={i}
                                 width="560"
                                 height="315"
