@@ -17,7 +17,7 @@ API's used
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/YouTube_Logo.svg/1280px-YouTube_Logo.svg.png" width="240" height="120" />
 
 <br>
-Front-end-Austine Gomez https://github.com/agomez99
+Back-end Austine Gomez https://github.com/agomez99
 <br>
-Back-end- Jio Martinez https://github.com/Jiovanie09
+ Front-end Jio Martinez https://github.com/Jiovanie09
 
