@@ -1,5 +1,4 @@
 import React, {useContext, useEffect} from 'react'
-
 import AuthContext from '../context/authContext/authContext'
 import NewBlog from '../Components/NewBlog/NewBlog'
 import Disqus from '../Components/Disqus';

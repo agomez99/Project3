@@ -19,9 +19,10 @@ const Register = (props) => {
         name: '',
         email: '',
         password: '',
-        password2: ''
+        password2: '',
+        avatar: ''
     })
-    const {name, email, password, password2}= user
+    const {name, email, password, password2,avatar}= user
 
     const handleChange = e => {
         setUser({...user, [e.target.name] : e.target.value})
@@ -32,7 +33,7 @@ const Register = (props) => {
         if(password !== password2) {
             setError({msg: "passwords don't match"})
         } else {
-            registerUser({name, email, password})
+            registerUser({name, email, password,avatar})
             clearErrors()
         }
     }
@@ -75,7 +76,7 @@ const Register = (props) => {
 
       <label for="fileUpload" >Upload Profile Pic</label>
       <form action="/api/images" method="post" enctype="multipart/form-data">
-        <input type="file" text ="upload profile pic"name="image" />
+        <input type="file" text ="upload profile pic"name="image" value={avatar} />
       </form>
 
         <input type="submit" value="Sign Up" className="btn"></input>
