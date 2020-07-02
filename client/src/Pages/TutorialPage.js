@@ -1,6 +1,9 @@
 import React, { useContext, useState, useEffect } from "react";
 import AuthContext from "../context/authContext/authContext";
 import "./style.css";
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from 'react-bootstrap/Container';
+
 
 require("dotenv").config();
 
@@ -44,29 +47,28 @@ export default function TutorialPage() {
     }
 
 
-  
+
     const videoId = userFetchResponse.data.items.map(obj => "https://www.youtube.com/embed/" + obj.id.videoId);
-    
+
     return (
         <>
-            <div>
-                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("Node.js")}>React</button>
+            <div className='flex-container'>
+
+                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("HTML")}>HTML</button>
+                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("CSS")}>CSS</button>
+                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("Express.js")}>Express</button>
+                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("Mongo.js")}>Mongo</button>
+                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("Javascript.js")}>Javascript</button>
             </div>
-            <div>
-                <button type="button" className='react-Button' value='react' onClick={(e)=> setValue("HTML")}>HTML</button>
-            </div>
-            <div>
-                <button type="button" className='react-Button' value='react' onClick={(e)=> setValue("CSS")}>CSS</button>
-            </div>
-            <div>
-                <button type="button" className='react-Button' value='react' onClick={(e)=> setValue("Express.js")}>Express</button>
-            </div>
-            <div>
-                <button type="button" className='react-Button' value='react' onClick={(e)=> setValue("Mongo.js")}>Mongo</button>
-            </div>
-            <div>
-                <button type="button" className='react-Button' value='react' onClick={(e)=> setValue("Javascript.js")}>Javascript</button>
-            </div>
+
+            <Jumbotron fluid className="introJumbotron">
+                <Container>
+                    <h1>Explore</h1>
+                    <p>
+                        Checkout some videos for the diferrent often used coding languages.
+                    </p>
+                </Container>
+            </Jumbotron>
             <div className='video-array'>
                 {
                     videoId.map((link, i) => {
