@@ -1,24 +1,25 @@
-body{
+body {
   text-align: center;
-  background: #8e9eab;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #8e9eab;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eef2f3, #8e9eab);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
-
 }
 
-
-.page-container{
+.page-container {
   display: flex;
   flex-direction: column;
 }
-.content-wrap{
+
+.content-wrap {
   flex: 1;
 }
 
-a{
-  color:black;
-
+a {
+  color: black;
 }
 
 label {
@@ -28,31 +29,11 @@ label {
 }
 
 input, textarea {
-  margin-left:40%;
-  margin-right:40%;
+  margin-left: 40%;
+  margin-right: 40%;
   margin-bottom: 20px;
   border: 1px solid #dedede;
   padding: 10px;
-}
-
-button {
-  display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: white;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  border-radius: 2px;
-  background-color: #928d97;
-  border: 1px solid #331550;
-  cursor: pointer;
-  box-sizing: border-box;
 }
 
 .comment {
@@ -61,66 +42,7 @@ button {
   border-bottom: 1px solid #ccc;
 }
 
-
-.author-image{
-  height:100px;
-}
-.blog{
-  margin-top:10%;
-  border-bottom: 1px solid #ccc;
-
-}
-.post {
-text-align: justify;
-margin-left: 16%;
-margin-right:16%;
-background-color: white;
-
-}
-.author{
-  text-align:center;
-  margin-left: 30%;
-  margin-right:30%;
+.title {
+  color: black;
 }
 
-.p-image{
-  max-height:100%;
-  display:block;
-  float:left;
-
-}
-.p-sumamry{
-  display:block;
-}
-.p-title{
-  text-align:center;
-}
-.post-snippet{
-  margin-top:5%;
-  margin-left:20%;
-  margin-right:20%;
-  height:200px;
-  border: 2px solid #dedede85;
-  display:block;
-  background-color: white;
-}
-
-.article-container{
-  margin-left:20%;
-  margin-right:20%;
-  margin-top:5%;
-  background-color:white;
-  padding:10px;
-  margin-bottom: 10%;
-}
-
-.error-notice{
-  color:red;
-}
-.error-button{
-  background:url(xbutton.jpg) no-repeat;
-  cursor:pointer;
-  border:none;
-  width:70px;
-  height:100px;
-}

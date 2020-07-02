@@ -1,7 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import Disqus from '../Disqus';
+import Disqus from '../Disqus/Disqus';
+import './styles.css'
 
 const Post = props => {
   const data = props.location.state;

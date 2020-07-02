@@ -7,6 +7,7 @@
     flex-direction: row;
 }
 .register{
+<<<<<<< HEAD
     margin-top:7%
 }
 
@@ -24,3 +25,26 @@
     background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 }
+=======
+    margin-top:2%
+}
+.login-btn {
+    margin-top: 10px;
+  }
+
+  .danger{
+    color:red;
+  }
+.error-notice {
+    color: red;
+  }
+  
+  .error-button {
+    background: url(../img/xbutton.jpg) no-repeat;
+    cursor: pointer;
+    border: none;
+    width: 70px;
+    height: 100px;
+  }
+  
+>>>>>>> 1e99018001452d5daf8b9cf2c3f253d0f3103278

@@ -1,6 +1,8 @@
 import React, {useState, useContext, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import AuthContext from '../context/authContext/authContext'
+
+
 //import Title from '../Components/Title/Title'
  import './style.css';
 
@@ -17,9 +19,10 @@ const Register = (props) => {
         name: '',
         email: '',
         password: '',
-        password2: ''
+        password2: '',
+        avatar: ''
     })
-    const {name, email, password, password2}= user
+    const {name, email, password, password2,avatar}= user
 
     const handleChange = e => {
         setUser({...user, [e.target.name] : e.target.value})
@@ -30,7 +33,7 @@ const Register = (props) => {
         if(password !== password2) {
             setError({msg: "passwords don't match"})
         } else {
-            registerUser({name, email, password})
+            registerUser({name, email, password,avatar})
             clearErrors()
         }
     }
@@ -38,20 +41,58 @@ const Register = (props) => {
   return (
     <div className="register">
       <h4>Sign Up</h4>
-      <p>Already have an account? {""} <Link to = '/login'>Login</Link></p>
+      <p>
+        Already have an account? {""} <Link to="/">Login</Link>
+      </p>
       <form onSubmit={handleSubmit} className="reg-form">
-      <input type="text" name="name" placeholder="name" value={name} onChange={handleChange}></input>
-      <input type="text" name="email" placeholder="email" value={email} onChange={handleChange}></input>
-      <input type="text" name="password" placeholder="password" value={password} onChange={handleChange}></input>
-      <input type="text" name="password2" placeholder="password2" value={password2} onChange={handleChange}></input>
-      <input type="submit" value="Sign Up" className="btn"></input>
+        <input
+          type="text"
+          name="name"
+          placeholder="name"
+          value={name}
+          onChange={handleChange}
+        ></input>
+        <input
+          type="text"
+          name="email"
+          placeholder="email"
+          value={email}
+          onChange={handleChange}
+        ></input>
+        <input
+          type="text"
+          name="password"
+          placeholder="password"
+          value={password}
+          onChange={handleChange}
+        ></input>
+        <input
+          type="text"
+          name="password2"
+          placeholder="password2"
+          value={password2}
+          onChange={handleChange}
+        ></input>
+
+      <label for="fileUpload" >Upload Profile Pic</label>
+      <form action="/api/images" method="post" enctype="multipart/form-data">
+        <input type="file" text ="upload profile pic"name="image" value={avatar} />
       </form>
+
+        <input type="submit" value="Sign Up" className="btn"></input>
+      </form>
+
+    
+      
       <div className="question">
-      {errors !== null && <button className="danger">
-      {errors.msg ? errors.msg : errors.error[0].msg}
-      <span onClick={() => clearErrors()}>X</span></button>}
+        {errors !== null && (
+          <button className="danger">
+            {errors.msg ? errors.msg : errors.error[0].msg}
+            <span onClick={() => clearErrors()}>X</span>
+          </button>
+        )}
       </div>
-    </div> 
+    </div>
   );
 }
 
