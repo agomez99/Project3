@@ -40,7 +40,7 @@ function App() {
 
             </Switch>
           </Router>
-          </AuthState>
+        </AuthState>
   );
 }
 
