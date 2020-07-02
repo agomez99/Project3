@@ -9,7 +9,7 @@ import TutorialPage from './Pages/TutorialPage';
 import MainNavbar from './Components/Navbar/Navbar';
 import Post from './Components/Post/Post';
 
-
+import NoPage from './Pages/NoPage/NoPage';
 import Register from './Pages/Register'
 import Login from './Pages/Login'
 import AuthState from './context/authContext/AuthState'
@@ -32,6 +32,8 @@ function App() {
               <Route exact path="/blog" component={BlogsPage} />
               <Route path="/blog/:slug" render={Post} />
               <Route exact path="/tutorial-page" component={TutorialPage} />
+              <Route component={NoPage} />
+
             </Switch>
           </Router>
           </AuthState>
