@@ -5,105 +5,88 @@ import "./style.css";
 require("dotenv").config();
 
 function useFetch(url, defaultResponse) {
-  const [data, setData] = useState(defaultResponse);
-  async function getDataFromAPI(url) {
-    try {
-      const res = await fetch(url);
-      const data = await res.json();
-      setData({
-        isLoading: false,
-        data,
-      });
-    } catch (e) {
-      console.log(e);
+    const [data, setData] = useState(defaultResponse);
+    async function getDataFromAPI(url) {
+        try {
+            const res = await fetch(url);
+            const data = await res.json();
+            setData({
+                isLoading: false,
+                data,
+            });
+        } catch (e) {
+            console.log(e);
+        }
     }
-  }
-  useEffect(() => {
-    getDataFromAPI(url);
-  }, [url]);
-  return data;
+    useEffect(() => {
+        getDataFromAPI(url);
+    }, [url]);
+    return data;
 }
 export default function TutorialPage() {
-  const { getUser } = useContext(AuthContext);
+    const { getUser } = useContext(AuthContext);
+    const [value, setValue] = useState('React.js')
+    useEffect(() => {
+        getUser();
+        // eslint-disable-next-line
+    }, []);
 
-  useEffect(() => {
-    getUser();
-    // eslint-disable-next-line
-  }, []);
 
-  const channelID = "UCXgGY0wkgOzynnHvSEVmE3A";
-  const APIKEY = process.env.REACT_APP_API_KEY;
-  const results = 10;
-  const apiEndpoint = `https://www.googleapis.com/youtube/v3/search?key=${APIKEY}&channelId=${channelID}&part=snippet,id&order=date&&maxResults=${results}`;
-  const userFetchResponse = useFetch(apiEndpoint, {
-    isLoading: true,
-    data: null,
-  });
-  if (!userFetchResponse.data || userFetchResponse.isLoading) {
-    return "Loading...";
-  }
-
-<<<<<<< HEAD
-    const channelID = "UCXgGY0wkgOzynnHvSEVmE3A";
-    const APIKEY = process.env.REACT_APP_API_KEY
-    const results = 5
-    const apiEndpoint = `https://www.googleapis.com/youtube/v3/search?key=${APIKEY}&channelId=${channelID}&part=snippet,id&order=date&&maxResults=${results}`
-    const userFetchResponse = useFetch(apiEndpoint, { isLoading: true, data: null });
+    const APIKEY = process.env.REACT_APP_API_KEY;
+    const results = 7;
+    const apiEndpoint = `https://www.googleapis.com/youtube/v3/search?key=${APIKEY}&q=${value}&part=snippet,id&order=date&&maxResults=${results}`;
+    const userFetchResponse = useFetch(apiEndpoint, {
+        isLoading: true,
+        data: null,
+    });
     if (!userFetchResponse.data || userFetchResponse.isLoading) {
-        return 'Loading...'
+        return "Loading...";
     }
-const videoTitle = userFetchResponse.data.items.map(obj => obj.snippet.channelTitle)
-const videoId = userFetchResponse.data.items.map(obj => "https://www.youtube.com/embed/"+obj.id.videoId);
-console.log(videoId)
-console.log(videoTitle)
-    return (
-        <div className='video-array'>
 
-            {
-                videoId.map((link, i) => {
-                    var frame =
-                        <div key={i}>
-                            <iframe className='videos'
-                                title={i}
-                                width="560"
-                                height="315"
-                                src={link}
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen>
-                            </iframe>
-                        </div>
-                    return frame
-                })
-            }
-          
-        </div>
+
+  
+    const videoId = userFetchResponse.data.items.map(obj => "https://www.youtube.com/embed/" + obj.id.videoId);
+    
+    return (
+        <>
+            <div>
+                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("Node.js")}>React</button>
+            </div>
+            <div>
+                <button type="button" className='react-Button' value='react' onClick={(e)=> setValue("HTML")}>HTML</button>
+            </div>
+            <div>
+                <button type="button" className='react-Button' value='react' onClick={(e)=> setValue("CSS")}>CSS</button>
+            </div>
+            <div>
+                <button type="button" className='react-Button' value='react' onClick={(e)=> setValue("Express.js")}>Express</button>
+            </div>
+            <div>
+                <button type="button" className='react-Button' value='react' onClick={(e)=> setValue("Mongo.js")}>Mongo</button>
+            </div>
+            <div>
+                <button type="button" className='react-Button' value='react' onClick={(e)=> setValue("Javascript.js")}>Javascript</button>
+            </div>
+            <div className='video-array'>
+                {
+                    videoId.map((link, i) => {
+                        var frame =
+                            <div key={i}>
+                                <iframe className='videos'
+                                    title={i}
+                                    width="560"
+                                    height="315"
+                                    src={link}
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen>
+                                </iframe>
+                            </div>
+                        return frame
+                    })
+                }
+
+            </div>
+        </>
     )
 }
-=======
-  const videoId = userFetchResponse.data.items.map(
-    (obj) => "https://www.youtube.com/embed/" + obj.id.videoId
-  );
-
-  return (
-    <div>
-      {videoId.map((link, i) => {
-        var frame = (
-          <div key={i} className="youtube">
-            <iframe
-              title={i}
-              width="560"
-              height="315"
-              src={link}
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-        );
-        return frame;
-      })}
-    </div>
-  );
-}
->>>>>>> 1e99018001452d5daf8b9cf2c3f253d0f3103278
