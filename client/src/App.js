@@ -7,17 +7,14 @@ import './App.css';
 import BlogsPage from "./Pages/BlogsPage";
 import TutorialPage from './Pages/TutorialPage';
 import MainNavbar from './Components/Navbar/Navbar';
-import MainFooter from './Components/Footer/Footer';
 import Post from './Components/Post/Post';
 
-
-// import Home from './components/pages/Home'
+import NoPage from './Pages/NoPage/NoPage';
 import Register from './Pages/Register'
 import Login from './Pages/Login'
 import AuthState from './context/authContext/AuthState'
 import setToken from './utils/setToken'
-//import PrivateRoute from './Pages/routing/PrivateRoute'
-
+import SignUp from './Pages/ProfilePage'
 
 if (localStorage.token) {
   setToken(localStorage.token);
@@ -35,8 +32,13 @@ function App() {
               <Route exact path="/blog" component={BlogsPage} />
               <Route path="/blog/:slug" render={Post} />
               <Route exact path="/tutorial-page" component={TutorialPage} />
+
+              <Route exact path ="/sign"component={SignUp} />
+
+              <Route component={NoPage} />
+
+
             </Switch>
-            <MainFooter />
           </Router>
         </AuthState>
   );

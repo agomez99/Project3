@@ -7,7 +7,8 @@
     flex-direction: row;
 }
 .register{
-    margin-top:2%
+    margin-top:2%;
+    text-align:center;
 }
 .login-btn {
     margin-top: 10px;
@@ -27,6 +28,7 @@
     width: 70px;
     height: 100px;
   }
+
  .react-Button{
    background-color: grey;
    color:white;
@@ -44,3 +46,12 @@
   
   
   
+  .login{
+    text-align: center;
+  }
+
+
+
+  
+
+
