@@ -2,7 +2,8 @@ import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../context/authContext/authContext";
 import Title from "../Components/Title/Title";
-import { Input } from "@material-ui/core";
+import TextField from '@material-ui/core/TextField';
+
 import { Button } from "@material-ui/core";
 import './style.css';
 
@@ -35,30 +36,34 @@ const Login = (props) => {
     <div className="login">
       <Title />
       <h4>Login</h4>
+      <form className="login-form"onSubmit={handleSubmit}>
+      <div>
 
-      <form noValidate autoComplete="on">
-        <Input
-          placeholder="Email"
+        <TextField
+          variant="outlined"
+          label="Email Address"
           type="text"
           name="email"
           value={email}
           onChange={handleChange}
           inputProps={{ "aria-label": "description" }}
         />
-      </form>
-      <form noValidate autoComplete="on">
-        <Input
-          placeholder="Password"
+        </div>
+      <br></br>
+        <TextField
+          variant="outlined"
+          label="Password"
+
+          autoFocus
           type="text"
           name="password"
           value={password}
           onChange={handleChange}
           inputProps={{ "aria-label": "description" }}
         />
-      </form>
-      <div className="login-btn">
-      <form onSubmit={handleSubmit}>
-        <Button
+        <br></br>
+        <div className="login-btn">
+        <Button 
           type="submit"
           value="Login"
           variant="contained"
@@ -66,8 +71,8 @@ const Login = (props) => {
         >
           Login
         </Button>
+        </div>
       </form>
-      </div>
       <div className="question">
         {errors !== null && (
           <button className="danger">

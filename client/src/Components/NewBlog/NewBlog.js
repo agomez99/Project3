@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import butter from '../../butter-client';
 import PostSnippet from '../Post/PostSnippet';
+import './styles.css';
 
 const Blog = () => {
   const [loading, setLoading] = useState(false);
@@ -43,7 +44,7 @@ const Blog = () => {
 
   return (
     <div>
-      <h1>Blog Posts</h1>
+      <h1 className="blog-header">Blog Posts</h1>
       {getContent()}
       
     </div>

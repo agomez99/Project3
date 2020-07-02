@@ -1,15 +1,42 @@
 import React, { useContext, Fragment } from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
-import Button from "react-bootstrap/Button";
+//import Navbar from "react-bootstrap/Navbar";
+//import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/authContext/authContext";
 import image from "../../img/dummy.png";
 
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+
+
+
 import "./style.css";
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
+
+
+
+
+
 const MainNavbar = () => {
+
+  const classes = useStyles();
+
+
   const { logout, clearErrors, userAuth, user } = useContext(AuthContext);
   const handleLogout = () => {
     logout();
@@ -33,10 +60,7 @@ const MainNavbar = () => {
           <i className="fas fa-sign-out-alt"></i>
         </a>
       </li>
-      <FormControl type="text" placeholder="Search" className="mx-auto" />
-          <Button variant="outline-info" className="search-button">
-            Search
-      </Button>
+
     </Fragment>
   );
 
@@ -57,12 +81,28 @@ const MainNavbar = () => {
   return (
     
     <div>
+
+<AppBar position="static" className="app-bar">
+  <Toolbar>
+    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+      <MenuIcon />
+    </IconButton>
+    <Typography variant="h5" className={classes.title}>
+      CodeSource
+    </Typography>
+    <div className="auth">{userAuth ? userLinks : authLinks}</div>
+  </Toolbar>
+</AppBar>
+
+{/* 
+
+
       <Navbar variant="dark" className="navbar">
         <Navbar.Brand className="logo">Code-Source</Navbar.Brand>
         <Form inline>
           <div className="auth">{userAuth ? userLinks : authLinks}</div>
         </Form>
-      </Navbar>
+      </Navbar> */}
     </div>
   );
 };

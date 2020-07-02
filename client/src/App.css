@@ -1,5 +1,4 @@
 body {
-  text-align: center;
   background: #8e9eab;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
@@ -26,20 +25,6 @@ label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
-}
-
-input, textarea {
-  margin-left: 40%;
-  margin-right: 40%;
-  margin-bottom: 20px;
-  border: 1px solid #dedede;
-  padding: 10px;
-}
-
-.comment {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ccc;
 }
 
 .title {

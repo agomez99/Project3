@@ -7,16 +7,13 @@ import './App.css';
 import BlogsPage from "./Pages/BlogsPage";
 import TutorialPage from './Pages/TutorialPage';
 import MainNavbar from './Components/Navbar/Navbar';
-import MainFooter from './Components/Footer/Footer';
 import Post from './Components/Post/Post';
 
 
-// import Home from './components/pages/Home'
 import Register from './Pages/Register'
 import Login from './Pages/Login'
 import AuthState from './context/authContext/AuthState'
 import setToken from './utils/setToken'
-//import PrivateRoute from './Pages/routing/PrivateRoute'
 
 
 if (localStorage.token) {
@@ -36,7 +33,6 @@ function App() {
               <Route path="/blog/:slug" render={Post} />
               <Route exact path="/tutorial-page" component={TutorialPage} />
             </Switch>
-            <MainFooter />
           </Router>
           </AuthState>
   );
