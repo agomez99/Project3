@@ -1,6 +1,11 @@
 import React from "react";
 import './styles.css';
 
+
+
+
+
+
 function NoPage() {
   return (
     <div>

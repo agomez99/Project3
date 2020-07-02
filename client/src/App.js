@@ -14,7 +14,7 @@ import Register from './Pages/Register'
 import Login from './Pages/Login'
 import AuthState from './context/authContext/AuthState'
 import setToken from './utils/setToken'
-
+import SignUp from './Pages/ProfilePage'
 
 if (localStorage.token) {
   setToken(localStorage.token);
@@ -32,7 +32,11 @@ function App() {
               <Route exact path="/blog" component={BlogsPage} />
               <Route path="/blog/:slug" render={Post} />
               <Route exact path="/tutorial-page" component={TutorialPage} />
+
+              <Route exact path ="/sign"component={SignUp} />
+
               <Route component={NoPage} />
+
 
             </Switch>
           </Router>
