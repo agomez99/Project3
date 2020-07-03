@@ -9,7 +9,7 @@ const PostSnippet = props => {
     <div className="post-snippet">
               <img src={props.featured_image} alt="Author" className="p-image"/>
            <h3>
-        <Link className="title" to={{
+        <Link className="p-title" to={{
           pathname: `/blog/${props.slug}`,
           state: props
         }}>

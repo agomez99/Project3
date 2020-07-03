@@ -17,9 +17,6 @@ body {
   flex: 1;
 }
 
-a {
-  color: black;
-}
 
 label {
   display: block;
