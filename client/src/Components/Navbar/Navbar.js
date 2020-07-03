@@ -46,10 +46,10 @@ const MainNavbar = () => {
   const userLinks = (
     <Fragment>
       <li>
-        <Link to="/blog">blog</Link>
+        <Link to="/blog">Blogs</Link>
       </li>
       <li>
-        <Link to="/tutorial-page">tutorials</Link>
+        <Link to="/tutorial-page">Tutorials</Link>
       </li>
       <img src={image} alt="me" className="profile-img" />
       <li className="user"> Hello, {user && user.name} </li>
