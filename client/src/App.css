@@ -18,13 +18,14 @@ body {
 }
 
 
-label {
-  display: block;
-  margin-bottom: 10px;
+.toggle-label {
   font-weight: bold;
+  text-align: right;
+  margin-right:5%;
 }
 
 .title {
   color: black;
 }
+
 

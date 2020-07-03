@@ -4,7 +4,7 @@ import { lightTheme, darkTheme } from '../src/Components/theme';
 import { GlobalStyles } from '../src/Components/global';
 import Toggle from '../src/Components/Toggle';
 import { useDarkMode } from '../src/Components/DarkMode';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+//import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
@@ -36,20 +36,22 @@ function App() {
 
   return (
     <ThemeProvider theme={themeMode}>
-        <GlobalStyles />
-
         <AuthState>
+
           <Router>
+          <GlobalStyles />
+
             <MainNavbar />
         <Toggle theme={theme} toggleTheme={toggleTheme} />
-        <label> {theme === "light" ? "light mode" : "dark mode"}!</label>
-
-        <FormControlLabel
+        <div className="toggle-label">
+        <label > {theme === "light" ? "light mode" : "dark mode"}!</label>
+        </div>
+        {/* <FormControlLabel
           value="bottom"
           control={<Switch color="primary" />}
           label="Mode"
           labelPlacement="bottom"
-        />
+        /> */}
             <Switch>
               <Route exact path="/" component={Login} />
               <Route exact path="/register" component={Register} />

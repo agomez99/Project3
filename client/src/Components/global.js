@@ -42,11 +42,10 @@ export const GlobalStyles = createGlobalStyle
  
     }
 
-    ..MuiPaper-root {
+    .reg-form{
         background: ${({ theme }) => theme.body};
         color: ${({ theme }) => theme.text};
     }
-    
 
   }
   `

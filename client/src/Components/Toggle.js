@@ -4,7 +4,7 @@ import { func, string } from 'prop-types';
 //import { ReactComponent as MoonIcon } from '../Components/icons/moon.svg';
 //import { ReactComponent as SunIcon } from '../Components/icons/sun.svg';
 import Switch from '@material-ui/core/Switch';
-
+import './style.css'
 // const ToggleContainer = styled.button`
 //   background: ${({ theme }) => theme.gradient};
 //   border: 2px solid ${({ theme }) => theme.toggleBorder};
@@ -39,12 +39,15 @@ import Switch from '@material-ui/core/Switch';
 const Toggle = ({ theme, toggleTheme }) => {
     
   return (
+    <div className="mode-switch"
+    >
     <Switch
       onClick={toggleTheme}
       defaultChecked
       color="default"
       inputProps={{ "aria-label": "checkbox with default color" }}
     />
+    </div>
   );
 };
 

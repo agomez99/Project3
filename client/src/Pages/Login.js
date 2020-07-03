@@ -153,7 +153,7 @@ const  Login = (props)=>{
         {errors !== null && (
           <button className="danger">
             {errors.msg ? errors.msg : errors.error[0].msg}
-            <span onClick={() => clearErrors()}>X</span>
+            <span onClick={() => clearErrors()}></span>
           </button>
         )}
         </div>

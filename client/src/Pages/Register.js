@@ -11,6 +11,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { GlobalStyles } from '../Components/global';
 
 function Copyright() {
   return (
@@ -80,7 +81,9 @@ const  Register = (props) =>{
     }
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container classNamr="register" component="main" maxWidth="xs">
+          <GlobalStyles />
+
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
