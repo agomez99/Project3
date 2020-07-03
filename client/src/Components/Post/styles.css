@@ -21,6 +21,7 @@
     max-height: 100%;
     display: block;
     float: left;
+    padding:10px;
 }
 
 .p-sumamry {
@@ -49,5 +50,10 @@
     background-color: white;
     padding: 10px;
     margin-bottom: 10%;
+}
+
+.share-btn{
+    float:right;
+    width:200px;
 }
 
