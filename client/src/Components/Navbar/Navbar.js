@@ -1,6 +1,4 @@
 import React, { useContext, Fragment } from "react";
-//import Navbar from "react-bootstrap/Navbar";
-//import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/authContext/authContext";
 import image from "../../img/dummy.png";
@@ -12,9 +10,6 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Typist from 'react-typist';
-
-
-
 import "./style.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -85,10 +80,11 @@ const MainNavbar = () => {
 
 <AppBar position="static" className="app-bar">
   <Toolbar>
-    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+    {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
       <MenuIcon />
-    </IconButton>
-    <Typography variant="h5" className={classes.title}>
+    </IconButton> */}
+
+    <Typography variant="h4" className={classes.title}>
     <Typist>
     <Typist.Delay ms={1000} />
 
@@ -100,8 +96,6 @@ const MainNavbar = () => {
 </AppBar>
 
 {/* 
-
-
       <Navbar variant="dark" className="navbar">
         <Navbar.Brand className="logo">Code-Source</Navbar.Brand>
         <Form inline>
