@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
   },
   image: {
-    backgroundImage: 'url(https://i.ibb.co/qW4j3xh/CODE.png)',
+    backgroundImage: 'url(https://media3.giphy.com/media/iggveUzFXCFca5Se3x/giphy.gif)',
     backgroundRepeat: 'no-repeat',
     backgroundColor:
       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
