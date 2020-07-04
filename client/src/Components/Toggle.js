@@ -36,6 +36,7 @@ import './style.css'
 //     }
 //   }
 // `;
+
 const Toggle = ({ theme, toggleTheme }) => {
     
   return (
@@ -44,8 +45,8 @@ const Toggle = ({ theme, toggleTheme }) => {
     <Switch
       onClick={toggleTheme}
       defaultChecked
-      color="default"
-      inputProps={{ "aria-label": "checkbox with default color" }}
+      color="secondary"
+      inputProps={{ "aria-label":  'primary'}}
     />
     </div>
   );
