@@ -5,14 +5,15 @@ import Disqus from '../Components/Disqus/Disqus';
 
 
 const BlogsPage = () => {
-const {getUser} = useContext(AuthContext)
 
+const {getUser} = useContext(AuthContext)
   useEffect(() => {
     getUser()
     // eslint-disable-next-line
   }, [])
   return (
     <div>
+
       <NewBlog />
       <Disqus />
     </div>

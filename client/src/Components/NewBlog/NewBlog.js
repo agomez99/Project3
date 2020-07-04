@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import butter from '../../butter-client';
 import PostSnippet from '../Post/PostSnippet';
+//import SearchBar from 'material-ui-search-bar';
+//import TextField from '@material-ui/core/TextField';
+//import SearchIcon from "@material-ui/icons/Search";
+//import InputAdornment from "@material-ui/core/InputAdornment";
+
+import './styles.css';
 
 const Blog = () => {
   const [loading, setLoading] = useState(false);
@@ -16,12 +22,12 @@ const Blog = () => {
         page_size: 10
       });
       setData(response.data);
+
     } catch(e) {
       setError(`There was an error: ${e.message}`);
     }
     setLoading(false);
   };
-
   useEffect(() => {
     fetchPosts();
   }, []);
@@ -31,7 +37,9 @@ const Blog = () => {
       {data.data.map((post, i) => (
         <PostSnippet {...post} key={i} />
       ))}
+
     </div>
+    
   );
 
   const getContent = () => {
@@ -40,12 +48,26 @@ const Blog = () => {
     if ( !data ) return null;
     return getPosts();
   }
-
   return (
     <div>
-      <h1>Blog Posts</h1>
+     {/* <TextField
+          id="standard-name"
+          label="Search"
+          type="search"
+          variant="outlined"
+          margin="normal"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <SearchIcon />
+              </InputAdornment>
+            )
+          }}
+                  /> 
+            */}
+    <h1 className="blog-header">Blog Posts</h1>
       {getContent()}
-      
+
     </div>
   );
 }

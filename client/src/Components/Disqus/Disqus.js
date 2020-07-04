@@ -3,16 +3,15 @@ import Disqus from "disqus-react"
 
 
 export default class extends Component {
-
-    
   render() {
     const disqusShortname = "codesource-1"
     const disqusConfig = {
-      url: "http://localhost:3000/blog/",
-      identifier: "/nodejs-beginner",
+      url: "",
+      identifier: "",
       title: "Title of Your Article",
       language: "en"
     }
+
 
     
     return (

@@ -9,6 +9,15 @@
      
 }
 
+.register{
+    margin-top:2%;
+    text-align:center;
+}
+.login-btn {
+    margin-top: 10px;
+  }
+
+
  .react-Button{
    background-color: grey;
    color:red;
@@ -86,3 +95,24 @@
   
   
   
+  .login{
+    text-align: center;
+  }
+
+
+.danger{
+  color:red;
+  font-size:30px;
+  background-color: white;
+  border-color: red;
+}
+  
+
+/* .danger{
+  background: url(../img/xbutton.jpg) no-repeat;
+  cursor: pointer;
+  border: none;
+  width: 70px;
+  height: 100px;
+}
+ */

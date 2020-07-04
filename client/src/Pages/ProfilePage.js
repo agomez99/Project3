@@ -1,14 +1,11 @@
 import React from 'react';
-import Title from '../Components/Title/Title';
-//import ProfileCard from '../Components/ProfileCard/ProfileCard';
 
-const ProfilePage = () => {
-    return (
-        <>
-            <Title />
-        </>
+function Copyright() {
+  return (
+<div>
 
-    )
+</div>
+  );
 }
 
-export default ProfilePage;
+export default Copyright;
