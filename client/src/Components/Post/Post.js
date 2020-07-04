@@ -32,22 +32,22 @@ const Post = (props) => {
       <div className="share-btn">
         <label>Share</label>{""}
       <EmailShareButton key={"email"} className={"btn"} url={data.url}>
-        <EmailIcon round size={32} />
+        <EmailIcon round size={50} />
       </EmailShareButton>
       <FacebookShareButton key={"fb"} className={"btn"} url={data.url}>
-        <FacebookIcon round size={32} />
+        <FacebookIcon round size={50} />
       </FacebookShareButton>
       <LinkedinShareButton key={"linked"} className={"btn"} url={data.url}>
-        <LinkedinIcon round size={32} />
+        <LinkedinIcon round size={50} />
       </LinkedinShareButton>
       <TwitterShareButton key={"twitter"} className={"btn"} url={data.url}>
-        <TwitterIcon round size={32} />
+        <TwitterIcon round size={50} />
       </TwitterShareButton>
       <RedditShareButton key={"reddit"} className={"btn"} url={data.url}>
-        <RedditIcon round size={32} />
+        <RedditIcon round size={50} />
       </RedditShareButton>
       </div>
-      <hr />
+      <hr/>
 
       <div className="author">
         <img

@@ -34,14 +34,16 @@ align-items: center;
  h1{
    font-size: 50px;
  }
+
  .introJumbotron{
   background: #232526;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- text-align: center;
   font-family: 'Playfair Display', serif;
   color: white;
+  text-align: center;
   font-size: 20px;
+  margin:auto;
  }
  .react-Button {
   border: none;
@@ -95,12 +97,6 @@ align-items: center;
   color: #000;
   font-size: 25px; 
 }
-
-
-
-  
-  
-  
   .login{
     text-align: center;
   }
@@ -114,11 +110,3 @@ align-items: center;
 }
   
 
-/* .danger{
-  background: url(../img/xbutton.jpg) no-repeat;
-  cursor: pointer;
-  border: none;
-  width: 70px;
-  height: 100px;
-}
- */
