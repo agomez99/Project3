@@ -11,6 +11,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Typist from 'react-typist';
 
 
 
@@ -88,7 +89,11 @@ const MainNavbar = () => {
       <MenuIcon />
     </IconButton>
     <Typography variant="h5" className={classes.title}>
+    <Typist>
+    <Typist.Delay ms={1000} />
+
       CodeSource
+      </Typist>
     </Typography>
     <div className="auth">{userAuth ? userLinks : authLinks}</div>
   </Toolbar>

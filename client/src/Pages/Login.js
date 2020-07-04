@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
 import AuthContext from "../context/authContext/authContext";
-
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -28,12 +27,13 @@ function Copyright() {
   );
 }
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
   },
   image: {
-    backgroundImage: 'url(https://d5qwk5ky11xwv.cloudfront.net/app/uploads/sites/3/2018/09/Java-code-3337044_1920.jpg)',
+    backgroundImage: 'url(https://i.ibb.co/qW4j3xh/CODE.png)',
     backgroundRepeat: 'no-repeat',
     backgroundColor:
       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
@@ -90,6 +90,7 @@ const  Login = (props)=>{
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+
         <div className={classes.paper}>
           <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
