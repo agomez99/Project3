@@ -13,7 +13,6 @@ const {getUser} = useContext(AuthContext)
   }, [])
   return (
     <div>
-
       <NewBlog />
       <Disqus />
     </div>
