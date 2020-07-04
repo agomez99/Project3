@@ -22,9 +22,10 @@ const Post = (props) => {
   const data = props.location.state;
   console.log(data);
   return (
+    <div>
     <div className="post">
       <h1 className="p-title">{data.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: data.body }} />
+      <div className="post-body" dangerouslySetInnerHTML={{ __html: data.body }} />
       <Chip color="primary" label={data.tags[0].name} />
       <Chip color="primary" label={data.tags[1].name} />
       <Chip color="primary" label={data.tags[2].name} />
@@ -66,7 +67,8 @@ const Post = (props) => {
       <hr />
       <hr />
       <Link to="/blog">&larr; Back to the posts list</Link>
-      <Disqus />
+      </div>
+      <Disqus/>
     </div>
   );
 };
