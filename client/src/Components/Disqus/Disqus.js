@@ -3,8 +3,6 @@ import Disqus from "disqus-react"
 
 
 export default class extends Component {
-
-    
   render() {
     const disqusShortname = "codesource-1"
     const disqusConfig = {

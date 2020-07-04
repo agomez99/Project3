@@ -24,12 +24,15 @@ const PostSnippet = props => {
       <div>
       <Chip 
             label={data.tags[0].name}
+            color="primary"
           />
           <Chip 
             label={data.tags[1].name}
+            color="primary"
           />
           <Chip 
             label={data.tags[2].name}
+            color="primary"
           />
         <div>By <strong>{props.author.first_name} {props.author.last_name}</strong></div>
         <span className="publication-date">

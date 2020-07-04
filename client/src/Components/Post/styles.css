@@ -19,9 +19,12 @@
 
 .p-image {
     max-height: 100%;
+    max-width: 100%;
     display: block;
     float: left;
     padding:10px;
+    height: auto;
+    width:auto;
 }
 
 .p-sumamry {
@@ -34,13 +37,18 @@
 
 .post-snippet {
     margin-top: 5%;
-    margin-left: 20%;
-    margin-right: 20%;
-    height: 250px;
+    margin-left: 23%;
+    margin-right: 23%;
     border: 2px solid #302c2c85;
-    display: block;
+    display: inline-block;
     background-color: white;
     padding:10px;
+    max-width:auto;
+    min-height:auto;
+    max-height:auto;
+    height:auto;
+    width: auto;
+
 }
 
 .article-container {

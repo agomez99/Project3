@@ -3,6 +3,7 @@ import moment from "moment";
 import { Link } from "react-router-dom";
 import Disqus from "../Disqus/Disqus";
 import Chip from "@material-ui/core/Chip";
+
 import {
   EmailShareButton,
   EmailIcon,
@@ -24,10 +25,10 @@ const Post = (props) => {
     <div className="post">
       <h1 className="p-title">{data.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: data.body }} />
-      <Chip label={data.tags[0].name} />
-      <Chip label={data.tags[1].name} />
-      <Chip label={data.tags[2].name} />
-      <container className="share-btn">
+      <Chip color="primary" label={data.tags[0].name} />
+      <Chip color="primary" label={data.tags[1].name} />
+      <Chip color="primary" label={data.tags[2].name} />
+      <div className="share-btn">
         <label>Share</label>{""}
       <EmailShareButton key={"email"} className={"btn"} url={data.url}>
         <EmailIcon round size={32} />
@@ -36,7 +37,7 @@ const Post = (props) => {
         <FacebookIcon round size={32} />
       </FacebookShareButton>
       <LinkedinShareButton key={"linked"} className={"btn"} url={data.url}>
-        <LinkedinIcon rouLinkedinShareButtonnd size={32} />
+        <LinkedinIcon round size={32} />
       </LinkedinShareButton>
       <TwitterShareButton key={"twitter"} className={"btn"} url={data.url}>
         <TwitterIcon round size={32} />
@@ -44,7 +45,7 @@ const Post = (props) => {
       <RedditShareButton key={"reddit"} className={"btn"} url={data.url}>
         <RedditIcon round size={32} />
       </RedditShareButton>
-      </container>
+      </div>
       <hr />
 
       <div className="author">
