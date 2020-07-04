@@ -20,8 +20,9 @@ body {
 
 .toggle-label {
   font-weight: bold;
-  text-align: right;
+  float: right;
   margin-right:5%;
+  display:flex;
 }
 
 .title {
