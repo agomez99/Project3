@@ -47,25 +47,24 @@ export default function TutorialPage() {
     }
 
 
-
+   
     const videoId = userFetchResponse.data.items.map(obj => "https://www.youtube.com/embed/" + obj.id.videoId);
 
     return (
         <>
             <div className='flex-container'>
-
-                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("HTML")}>HTML</button>
-                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("CSS")}>CSS</button>
-                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("Express.js")}>Express</button>
-                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("Mongo.js")}>Mongo</button>
-                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("Javascript.js")}>Javascript</button>
+                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("HTML tutorials")}>HTML</button>
+                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("CSS tutorials")}>CSS</button>
+                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("Express.js tutorials")}>Express</button>
+                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("Mongo.js tutorials")}>Mongo</button>
+                <button type="button" className='react-Button' value='react' onClick={(e) => setValue("Javascript.js tutorials")}>Javascript</button>
             </div>
 
             <Jumbotron fluid className="introJumbotron">
                 <Container>
                     <h1>Explore</h1>
                     <p>
-                        Checkout some videos for the diferrent often used coding languages.
+                        Checkout some tutorial videos on the often used coding languages.
                     </p>
                 </Container>
             </Jumbotron>
@@ -73,7 +72,7 @@ export default function TutorialPage() {
                 {
                     videoId.map((link, i) => {
                         var frame =
-                            <div key={i}>
+                            <div key={i} >
                                 <iframe className='videos'
                                     title={i}
                                     width="560"
@@ -82,7 +81,7 @@ export default function TutorialPage() {
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen>
-                                </iframe>
+                                </iframe> 
                             </div>
                         return frame
                     })
