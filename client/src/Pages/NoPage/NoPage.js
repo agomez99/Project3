@@ -1,10 +1,15 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import './styles.css';
 
 
 function NoPage() {
   return (
     <div>
+  <div className="nopage-login">
+    <lable>please sign in!!!</lable>
+  <Link to="/" className="btn btn-primary">Login</Link>
+  </div>
   <div class="container">
         <svg class="milk-404" viewBox="100 30 500 500">
           <g id="milk-spill" fill="#fff">

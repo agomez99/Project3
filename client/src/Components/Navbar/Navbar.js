@@ -1,8 +1,7 @@
 import React, { useContext, Fragment } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/authContext/authContext";
-import image from "../../img/dummy.png";
-
+import image2 from "./red.png" ;
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -21,10 +20,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
-
-
-
-
 
 const MainNavbar = () => {
 
@@ -45,7 +40,6 @@ const MainNavbar = () => {
       <li>
         <Link to="/tutorial-page">Tutorials</Link>
       </li>
-      <img src={image} alt="me" className="profile-img" />
       <li className="user"> Hello, {user && user.name} </li>
       <span className="sm-hide">|</span>
       <li>
@@ -75,31 +69,18 @@ const MainNavbar = () => {
   return (
     
     <div>
-
 <AppBar position="static" className="app-bar">
   <Toolbar>
-    {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-      <MenuIcon />
-    </IconButton> */}
-
+  <img src={image2} alt="" className="logo" />
     <Typography variant="h4" className={classes.title}>
     <Typist>
     <Typist.Delay ms={1000} />
-
       CodeSource
       </Typist>
     </Typography>
     <div className="auth">{userAuth ? userLinks : authLinks}</div>
   </Toolbar>
 </AppBar>
-
-{/* 
-      <Navbar variant="dark" className="navbar">
-        <Navbar.Brand className="logo">Code-Source</Navbar.Brand>
-        <Form inline>
-          <div className="auth">{userAuth ? userLinks : authLinks}</div>
-        </Form>
-      </Navbar> */}
     </div>
   );
 };

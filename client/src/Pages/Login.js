@@ -119,7 +119,7 @@ const  Login = (props)=>{
           margin="normal"
           fullWidth
           autoFocus
-          type="text"
+          type="password"
           name="password"
           value={password}
           onChange={handleChange}

@@ -41,3 +41,10 @@ padding:5px;
 .fa {
     padding:5px;
 }
+.logo{
+    height:50px;
+    width:50px;
+    display:flex;
+    float:left;
+    margin-right:5px;
+}

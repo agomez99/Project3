@@ -8,4 +8,9 @@
   #mouth-frown{
     visibility: hidden;
   }
+
+  .nopage-login{
+    margin-left:20%;
+    color:red;
+  }
   
