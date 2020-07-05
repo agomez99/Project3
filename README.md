@@ -1,5 +1,7 @@
 # Project3
-group project 3
+<h1>CodeSource</h1>
+<br>
+Deployment:
 
 <br>
 A coder's website with with a user login and user's blog, stories and tutorials.
@@ -17,6 +19,11 @@ API's used
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/YouTube_Logo.svg/1280px-YouTube_Logo.svg.png" width="240" height="120" />
 
 <br>
+CSS Frameworks
+<br>
+<img src="https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png" width="200" height="120" />
+<img src="https://www.bootstrapcdn.com/assets/img/integrations/react-bootstrap.c4f9aa2.png" width="250" height="200" />
+
 Back-end Austine Gomez https://github.com/agomez99
 <br>
  Front-end Jio Martinez https://github.com/Jiovanie09
