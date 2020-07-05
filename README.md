@@ -1,5 +1,7 @@
 # Project3
-group project 3
+<h1>CodeSource</h1>
+<br>
+Deployment:
 
 <br>
 A coder's website with with a user login and user's blog, stories and tutorials.
