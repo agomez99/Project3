@@ -105,8 +105,8 @@ align-items: center;
 .danger{
   color:red;
   font-size:30px;
-  background-color: white;
   border-color: red;
+  text-align:center;
 }
   
 

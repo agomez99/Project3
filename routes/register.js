@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken')
 const User = require('../models/User')
 
 
-router.post('/', 
+router.post('/register', 
 [
     check('name', 'Please provide a name').not().isEmpty(),
     check('email', 'Please provide a valid email').isEmail(),
