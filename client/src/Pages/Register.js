@@ -48,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
 
 const  Register = (props) =>{
   const classes = useStyles();
- // const {registerUser, userAuth, errors, setError, clearErrors} = useContext(AuthContext)
   const {registerUser, userAuth, setError, errors, clearErrors} = useContext(AuthContext)
 
   useEffect(() => {

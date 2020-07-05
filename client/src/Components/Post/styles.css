@@ -1,3 +1,7 @@
+.blog-header{
+    font-family: 'Roboto', sans-serif;
+
+}
 .post {
     text-align: left;
     margin-left: 16%;
@@ -41,6 +45,8 @@
 
 .p-sumamry {
     display: block;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .p-title {
@@ -62,6 +68,8 @@
     height:auto;
     width: auto;
     font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .article-container {
@@ -71,6 +79,8 @@
     background-color: white;
     padding: 10px;
     margin-bottom: 10%;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .share-btn{

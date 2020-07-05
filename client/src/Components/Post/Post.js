@@ -20,7 +20,6 @@ import "./styles.css";
 
 const Post = (props) => {
   const data = props.location.state;
-  console.log(data);
   return (
     <div>
     <div className="post">
