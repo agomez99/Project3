@@ -19,7 +19,8 @@ API's used
 <br>
 CSS Frameworks
 <br>
-<img src="https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png" width="200" height="120" /><img src="https://mpng.subpng.com/20180531/sas/kisspng-bootstrap-react-software-framework-javascript-fron-5b0f9b1ab26fd7.9058729715277494027309.jpg" width="200" height="200" />
+<img src="https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png" width="200" height="120" />
+<img src="https://www.bootstrapcdn.com/assets/img/integrations/react-bootstrap.c4f9aa2.png" width="250" height="200" />
 
 Back-end Austine Gomez https://github.com/agomez99
 <br>
