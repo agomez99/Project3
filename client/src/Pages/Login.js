@@ -125,10 +125,7 @@ const  Login = (props)=>{
           onChange={handleChange}
           inputProps={{ "aria-label": "description" }}
         />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
+
            <Button 
           type="submit"
           value="Login"
