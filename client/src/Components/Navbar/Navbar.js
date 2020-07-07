@@ -40,6 +40,9 @@ const MainNavbar = () => {
       <li>
         <Link to="/tutorial-page">Tutorials</Link>
       </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
       <li className="user"> Hello, {user && user.name} </li>
       <span className="sm-hide">|</span>
       <li>

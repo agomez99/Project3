@@ -15,6 +15,7 @@ import Post from "./Components/Post/Post";
 import NoPage from "./Pages/NoPage/NoPage";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
+import About from "./Pages/About.js";
 import AuthState from "./context/authContext/AuthState";
 import setToken from "./utils/setToken";
 
@@ -45,6 +46,7 @@ function App() {
             <Route exact path="/blog" component={BlogsPage} />
             <Route path="/blog/:slug" render={Post} />
             <Route exact path="/tutorial-page" component={TutorialPage} />
+            <Route exact path="/about" component={About}/>
             <Route component={NoPage} />
           </Switch>
         </Router>

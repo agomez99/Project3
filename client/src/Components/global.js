@@ -36,16 +36,12 @@ export const GlobalStyles = createGlobalStyle
   .article-container{
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-
+  }
     a{
         color: ${({ theme }) => theme.text};
  
     }
 
-    .reg-form{
-        background: ${({ theme }) => theme.body};
-        color: ${({ theme }) => theme.text};
-    }
 
   }
   `
