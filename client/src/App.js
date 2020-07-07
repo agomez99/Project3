@@ -1,20 +1,22 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "../src/Components/theme";
+import { GlobalStyles } from "../src/Components/global";
+import Toggle from "../src/Components/Toggle";
+import { useDarkMode } from "../src/Components/DarkMode";
+//import FormControlLabel from '@material-ui/core/FormControlLabel';
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
 import BlogsPage from "./Pages/BlogsPage";
 import TutorialPage from "./Pages/TutorialPage";
+import MainNavbar from "./Components/Navbar/Navbar";
+import Post from "./Components/Post/Post";
 import NoPage from "./Pages/NoPage/NoPage";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import AuthState from "./context/authContext/AuthState";
 import setToken from "./utils/setToken";
-import Toggle from "../src/Components/Toggle";
-import MainNavbar from "./Components/Navbar/Navbar";
-import Post from "./Components/Post/Post";
-import { lightTheme, darkTheme } from "../src/Components/theme";
-import { GlobalStyles } from "../src/Components/global";
-import { useDarkMode } from "../src/Components/DarkMode";
-import "./App.css";
 
 if (localStorage.token) {
   setToken(localStorage.token);
