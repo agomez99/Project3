@@ -39,8 +39,9 @@ function App() {
             <label className="toggle-label"> {theme === "light" ? "light mode" : "dark mode"}!</label>
           <Toggle theme={theme} toggleTheme={toggleTheme} />
           <Switch>
-            <Route exact path="/" component={Login} />
             <Route exact path="/register" component={Register} />
+            <Route exact path="/" component={Login} />
+
             <Route exact path="/blog" component={BlogsPage} />
             <Route path="/blog/:slug" render={Post} />
             <Route exact path="/tutorial-page" component={TutorialPage} />

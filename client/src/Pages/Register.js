@@ -48,8 +48,7 @@ const useStyles = makeStyles((theme) => ({
 
 const  Register = (props) =>{
   const classes = useStyles();
- // const {registerUser, userAuth, errors, setError, clearErrors} = useContext(AuthContext)
-  const {registerUser, userAuth, setError, clearErrors} = useContext(AuthContext)
+  const {registerUser, userAuth, errors, setError, clearErrors} = useContext(AuthContext)
 
   useEffect(() => {
     if(userAuth) {
@@ -61,10 +60,9 @@ const  Register = (props) =>{
         name: '',
         email: '',
         password: '',
-        password2: '',
-        avatar: ''
-    })
-    const {name, email, password, password2,avatar}= user
+        password2: ''
+          })
+    const {name, email, password, password2}= user
 
     const handleChange = e => {
         setUser({...user, [e.target.name] : e.target.value})
@@ -75,15 +73,14 @@ const  Register = (props) =>{
         if(password !== password2) {
             setError({msg: "passwords don't match"})
         } else {
-            registerUser({name, email, password,avatar})
+            registerUser({name, email, password})
             clearErrors()
         }
     }
 
   return (
-    <Container classNamr="register" component="main" maxWidth="xs">
+    <Container className="register" component="main" maxWidth="xs">
           <GlobalStyles />
-
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -93,8 +90,16 @@ const  Register = (props) =>{
           Sign up
         </Typography>
         <form onSubmit={handleSubmit} className="reg-form">
+
           <Grid container spacing={2}>
             <Grid item xs={12} >
+              
+        {errors !== null && (
+          <button className="danger">
+            {errors.msg ? errors.msg : errors.error[0].msg}
+            <span onClick={() => clearErrors()}></span>
+          </button>
+        )}
               <TextField
                 autoComplete="fname"
                 name="name"
@@ -124,12 +129,12 @@ const  Register = (props) =>{
             </Grid>
             <Grid item xs={12}>
               <TextField
+              type="password"
                 variant="outlined"
                 required
                 fullWidth
                 name="password"
                 label="Password"
-                type="password"
                 id="password"
                 autoComplete="current-password"
                 value={password}
@@ -138,7 +143,7 @@ const  Register = (props) =>{
             </Grid>
             <Grid item xs={12}>
               <TextField
-               type="text"
+               type="password"
                 variant="outlined"
                 required
                 fullWidth
@@ -157,7 +162,7 @@ const  Register = (props) =>{
             value="Sign Up" 
             variant="contained"
             color="primary"
-            className="btne"
+            className="btn"
           >
             Sign Up
           </Button>
