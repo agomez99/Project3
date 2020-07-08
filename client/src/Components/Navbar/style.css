@@ -10,11 +10,10 @@ li{
     display: inline;
     font-size: 20px;
     color:white;
-    padding:10px;
-    padding-top:100px
+    padding:15px;
 }
 li a{
-    color:white
+    color:white;
 }
 
 .sm-hide{
@@ -31,6 +30,10 @@ margin-right:20px;
 
 .user{
     color:white;
+    font-size: x-large;
+    font-family: 'Roboto', sans-serif;
+    margin-left:150px;
+
 }
 
 .profile-img{
