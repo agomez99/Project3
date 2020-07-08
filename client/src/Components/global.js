@@ -41,7 +41,10 @@ export const GlobalStyles = createGlobalStyle
         color: ${({ theme }) => theme.text};
  
     }
-
+    .register{
+      background: ${({ theme }) => theme.body};
+      color: ${({ theme }) => theme.text};
+    }
 
   }
   `

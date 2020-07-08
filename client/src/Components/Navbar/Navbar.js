@@ -7,6 +7,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Typist from 'react-typist';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import PersonIcon from '@material-ui/icons/Person';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+
 import "./style.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -19,6 +23,8 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+
+
 }));
 
 const MainNavbar = () => {
@@ -34,6 +40,7 @@ const MainNavbar = () => {
 
   const userLinks = (
     <Fragment>
+    <u>
       <li>
         <Link to="/blog">Blogs</Link>
       </li>
@@ -48,24 +55,26 @@ const MainNavbar = () => {
       <li>
         <a href="/" onClick={handleLogout}>
           <span className="sm-hide">Logout</span>
-          <i className="fas fa-sign-out-alt"></i>
+          <ExitToAppIcon fontSize="large"/>
         </a>
       </li>
-
+</u>
     </Fragment>
   );
 
   const authLinks = (
     <Fragment>
+    <ul>
       <li>
         <Link to="/register">Register</Link>
-        <i className="fa fa-user-plus" aria-hidden="true"></i>
+        <PersonAddIcon  fontSize="large"/>
       </li>
       <span className="sm-hide">|</span>
       <li>
         <Link to="/">Login</Link>
-        <i className="fa fa-user" aria-hidden="true"></i>
+        <PersonIcon fontSize="large"/>
       </li>
+      </ul>
     </Fragment>
   );
 

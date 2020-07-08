@@ -27,6 +27,9 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((theme) => ({
+  root:{
+    background:"white"
+  },
   paper: {
     marginTop: theme.spacing(8),
     display: 'flex',
@@ -44,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  input: {
+    color: "black"
+  }
 }));
 
 const  Register = (props) =>{
@@ -101,6 +107,7 @@ const  Register = (props) =>{
           </button>
         )}
               <TextField
+                className={classes.root}
                 autoComplete="fname"
                 name="name"
                 variant="outlined"
@@ -112,10 +119,13 @@ const  Register = (props) =>{
                 autoFocus
                 value={name}
                 onChange={handleChange}
+                color= 'primary'
+                
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
+               className={classes.root}
                 variant="outlined"
                 required
                 fullWidth
@@ -125,10 +135,13 @@ const  Register = (props) =>{
                 autoComplete="email"
                 value={email}
                 onChange={handleChange}
+                color= 'primary'
+
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
+              className={classes.root}
               type="password"
                 variant="outlined"
                 required
@@ -139,10 +152,13 @@ const  Register = (props) =>{
                 autoComplete="current-password"
                 value={password}
                 onChange={handleChange}
+                color= 'primary'
+
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
+               className={classes.root}
                type="password"
                 variant="outlined"
                 required
@@ -153,6 +169,8 @@ const  Register = (props) =>{
                 autoComplete="current-password"
                 value={password2}
                 onChange={handleChange}
+                color= 'primary'
+
               />
             </Grid>
           </Grid>

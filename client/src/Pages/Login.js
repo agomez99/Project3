@@ -25,13 +25,12 @@ function Copyright() {
   );
 }
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
   },
   image: {
-    backgroundImage: 'url(https://media3.giphy.com/media/iggveUzFXCFca5Se3x/giphy.gif)',
+    backgroundImage: 'url(https://i.ibb.co/N3YLvcr/screen.jpg)',
     backgroundRepeat: 'no-repeat',
     backgroundColor:
       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
