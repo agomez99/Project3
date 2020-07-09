@@ -1,12 +1,16 @@
 import React, { useContext, Fragment } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/authContext/authContext";
-import image2 from "./red.png" ;
+import image2 from "./red.png";
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Typist from 'react-typist';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import PersonIcon from '@material-ui/icons/Person';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+
 import "./style.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -19,6 +23,8 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+
+
 }));
 
 const MainNavbar = () => {
@@ -34,53 +40,64 @@ const MainNavbar = () => {
 
   const userLinks = (
     <Fragment>
-      <li>
-        <Link to="/blog">Blogs</Link>
-      </li>
-      <li>
-        <Link to="/tutorial-page">Tutorials</Link>
-      </li>
-      <li className="user"> Hello, {user && user.name} </li>
-      <span className="sm-hide">|</span>
-      <li>
-        <a href="/" onClick={handleLogout}>
-          <span className="sm-hide">Logout</span>
-          <i className="fas fa-sign-out-alt"></i>
-        </a>
-      </li>
+      <ul>
+        <li>
+          <Link to="/blog">Blogs</Link>
+        </li>
+        <span className="sm-hide">|</span>
+        <li>
+          <Link to="/tutorial-page">Tutorials</Link>
+        </li>
+        <span className="sm-hide">|</span>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li className="user"> Hello, {user && user.name} </li>
+        <PersonIcon fontSize="large" />
 
+        <span className="sm-hide">|</span>
+
+        <li>
+          <a href="/" onClick={handleLogout}>
+            <span className="sm-hide">Logout</span>
+            <ExitToAppIcon fontSize="large" />
+          </a>
+        </li>
+      </ul>
     </Fragment>
   );
 
   const authLinks = (
     <Fragment>
-      <li>
-        <Link to="/register">Register</Link>
-        <i className="fa fa-user-plus" aria-hidden="true"></i>
-      </li>
-      <span className="sm-hide">|</span>
-      <li>
-        <Link to="/">Login</Link>
-        <i className="fa fa-user" aria-hidden="true"></i>
-      </li>
+      <ul>
+        <li>
+          <Link to="/register">Register</Link>
+          <PersonAddIcon fontSize="large" />
+        </li>
+        <span className="sm-hide">|</span>
+        <li>
+          <Link to="/">Login</Link>
+          <PersonIcon fontSize="large" />
+        </li>
+      </ul>
     </Fragment>
   );
 
   return (
-    
+
     <div>
-<AppBar position="static" className="app-bar">
-  <Toolbar>
-  <img src={image2} alt="" className="logo" />
-    <Typography variant="h4" className={classes.title}>
-    <Typist>
-    <Typist.Delay ms={1000} />
+      <AppBar position="static" className="app-bar">
+        <Toolbar>
+          <img src={image2} alt="" className="logo" />
+          <Typography variant="h4" className={classes.title}>
+            <Typist>
+              <Typist.Delay ms={1000} />
       CodeSource
       </Typist>
-    </Typography>
-    <div className="auth">{userAuth ? userLinks : authLinks}</div>
-  </Toolbar>
-</AppBar>
+          </Typography>
+          <div className="auth">{userAuth ? userLinks : authLinks}</div>
+        </Toolbar>
+      </AppBar>
     </div>
   );
 };

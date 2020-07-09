@@ -19,10 +19,9 @@ const Blog = () => {
     try {
       const response = await butter.post.list({
         page: 1, 
-        page_size: 10
+        page_size: 20
       });
       setData(response.data);
-
     } catch(e) {
       setError(`There was an error: ${e.message}`);
     }
@@ -36,6 +35,7 @@ const Blog = () => {
     <div>
       {data.data.map((post, i) => (
         <PostSnippet {...post} key={i} />
+        
       ))}
 
     </div>
@@ -50,21 +50,7 @@ const Blog = () => {
   }
   return (
     <div>
-     {/* <TextField
-          id="standard-name"
-          label="Search"
-          type="search"
-          variant="outlined"
-          margin="normal"
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <SearchIcon />
-              </InputAdornment>
-            )
-          }}
-                  /> 
-            */}
+
     <h1 className="blog-header">Blog Posts</h1>
       {getContent()}
 
