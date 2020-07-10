@@ -24,13 +24,14 @@ A coder's website with with a user login and user's blog, stories and tutorials.
 <br>
 <br>
 Technologies used:
-MongoDB Atlas, 
-React, 
-Express, 
-NodeJS, 
-ButterCMS, Disqus, Youtube API
-Material UI, React Bootstrap
-CircleCI and Heroku
+
+* MongoDB Atlas 
+* React 
+* Express
+* NodeJS 
+* ButterCMS, Disqus, Youtube API
+* Material UI, React Bootstrap
+* CircleCI and Heroku
 <br>
 <br>
 Motivation
