@@ -6,9 +6,10 @@ Deployment:
 https://codessource.herokuapp.com/
 <br>
 <br>
-<img src="https://raw.githubusercontent.com/agomez99/CodeSource/master/screenshot.png"/>
 <br>
-
+<p align="center">
+<img src="https://raw.githubusercontent.com/agomez99/CodeSource/master/screenshot.png"/>
+</p>
 Back-end Austine Gomez https://github.com/agomez99
 <br>
  Front-end Jio Martinez https://github.com/Jiovanie09
