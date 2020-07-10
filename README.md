@@ -1,11 +1,13 @@
 # Project3
-<h1>CodeSource</h1>
-<br>
-Deployment:
-<br>
-
 
 <p align="center">
+CodeSource
+</p>
+<br>
+<br>
+
+<p align="center">
+Deployment:
 https://codessource.herokuapp.com/
 </p>
 
