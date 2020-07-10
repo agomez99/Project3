@@ -4,7 +4,6 @@
 CodeSource
 </p>
 <br>
-<br>
 
 <p align="center">
 Deployment:
@@ -13,8 +12,7 @@ https://codessource.herokuapp.com/
 
 
 <br>
-<br>
-<br>
+
 <p align="center">
 <img src="https://raw.githubusercontent.com/agomez99/CodeSource/master/screenshot.png"/>
 </p>
