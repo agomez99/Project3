@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import butter from '../../butter-client';
 import PostSnippet from '../Post/PostSnippet';
-//import SearchBar from 'material-ui-search-bar';
-//import TextField from '@material-ui/core/TextField';
-//import SearchIcon from "@material-ui/icons/Search";
-//import InputAdornment from "@material-ui/core/InputAdornment";
+
 
 import './styles.css';
 
