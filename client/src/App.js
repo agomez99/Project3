@@ -11,6 +11,7 @@ import "./App.css";
 import BlogsPage from "./Pages/BlogsPage";
 import TutorialPage from "./Pages/TutorialPage";
 import MainNavbar from "./Components/Navbar/Navbar";
+import Footer from './Components/Footer/Footer'
 import Post from "./Components/Post/Post";
 import NoPage from "./Pages/NoPage/NoPage";
 import Register from "./Pages/Register";
@@ -49,6 +50,8 @@ function App() {
             <Route exact path="/about" component={About}/>
             <Route component={NoPage} />
           </Switch>
+          <Footer />
+
         </Router>
       </AuthState>
     </ThemeProvider>
